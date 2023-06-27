@@ -1,3 +1,3 @@
 # Mastering Python :snake:
 
-A perfect place to consute about python and also save notes from studies.
+A particular but not private repository to centralize all studies about Python and a few famous Python's libraries. It's kind my own documentation about the language.

@@ -1,0 +1,16 @@
+site_name: Mastering Python
+repo_url: https://github.com/RomeroGabriel/mastering-python
+docs_dir: 'documentation'
+
+theme:
+  name: material
+  language:  en
+  pallete:
+    primary: blue
+  feature:
+    -navigation.tabs
+    -navigation.tabs.sticky
+    -navigation.tabs.instant
+
+plugins:
+  - search
