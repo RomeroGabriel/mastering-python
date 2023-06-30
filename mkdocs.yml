@@ -7,6 +7,7 @@ nav:
   - Basics:
       - Python Paradigms: basics/python_paradigm.md
       - Variables and Datatypes: basics/variables_and_datatypes.md
+      - Operators: basics/operators.md
   - Data Model: data_model/index.md
 
 theme:
