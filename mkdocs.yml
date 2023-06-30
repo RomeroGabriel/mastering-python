@@ -12,8 +12,10 @@ nav:
 theme:
   name: material
   language: en
-  pallete:
-    primary: blue
+  palette:
+      scheme: slate
+      primary: blue
+      accent: yellow
   features:
     - navigation.tabs
     - navigation.tabs.sticky
