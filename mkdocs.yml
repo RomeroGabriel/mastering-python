@@ -1,16 +1,39 @@
 site_name: Mastering Python
 repo_url: https://github.com/RomeroGabriel/mastering-python
-docs_dir: 'documentation'
+docs_dir: "documentation"
+
+nav:
+  - Home: index.md
+  - Basics:
+      - Python Paradigms: basics/python_paradigm.md
+      - Variables and Datatypes: basics/variables_and_datatypes.md
+  - Data Model: data_model/index.md
 
 theme:
   name: material
-  language:  en
+  language: en
   pallete:
     primary: blue
-  feature:
-    -navigation.tabs
-    -navigation.tabs.sticky
-    -navigation.tabs.instant
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tabs.instant
+    - content.code.copy
+    - content.code.annotate
 
 plugins:
   - search
+  - markdown-exec
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
