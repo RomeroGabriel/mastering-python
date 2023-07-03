@@ -8,11 +8,14 @@ nav:
       - Python Paradigms: basics/python_paradigm.md
       - Variables and Datatypes: basics/variables_and_datatypes.md
       - Operators: basics/operators.md
+      - Control Flow: basics/control_flow.md
   - Data Model: data_model/index.md
 
 theme:
   name: material
   language: en
+  logo: images/python.png
+  favicon: images/py.svg
   palette:
       scheme: slate
       primary: blue
