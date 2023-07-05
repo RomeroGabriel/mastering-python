@@ -9,6 +9,7 @@ nav:
       - Variables and Datatypes: basics/variables_and_datatypes.md
       - Operators: basics/operators.md
       - Control Flow: basics/control_flow.md
+      - Exception Handling: basics/exception.md
   - Data Model: data_model/index.md
 
 theme:
