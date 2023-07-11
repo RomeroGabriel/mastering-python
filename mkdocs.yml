@@ -1,5 +1,4 @@
 site_name: Mastering Python
-repo_url: https://github.com/RomeroGabriel/mastering-python
 docs_dir: "documentation"
 
 nav:
@@ -11,6 +10,7 @@ nav:
       - Control Flow: basics/control_flow.md
       - Exception Handling: basics/exception.md
       - Modules and Packages: basics/modules_packages.md
+      - Object References, Mutability, and Recycling: basics/object_handling.md
   - Data Model: data_model/index.md
 
 theme:
