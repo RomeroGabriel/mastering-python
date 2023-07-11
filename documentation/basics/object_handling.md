@@ -75,7 +75,7 @@ The `__copy__()` method allows you to **define how an object should be shallow c
 
 ## Command `del` and Garbage Collection
 
-> Objects are never explicitly destroyed; however, when they become unreachable they 
+> Objects are never explicitly destroyed; however, when they become unreachable they
 may be garbage-collected.
 
 The `del` is that it’s not a function, it’s a statement. del deletes references, not objects. Python’s garbage collector may discard an object from memory as an indirect result of del, if the deleted variable was the last reference to the object. In CPython, the primary algorithm for garbage collection is reference counting.
