@@ -11,7 +11,15 @@ nav:
       - Exception Handling: basics/exception.md
       - Modules and Packages: basics/modules_packages.md
       - Object References, Mutability, and Recycling: basics/object_handling.md
-  - Data Model: data_model/index.md
+  - Functions:
+      - Basic: functions/basic.md
+      - Parameters and Return: functions/parameters.md
+      - Anonymous/Lambda Funtions: functions/anonymous_lambda_func.md
+      - High-Order Functions: functions/high_order_func.md
+      - The Nine Types of Callable Objects: functions/high_order_func.md
+      - Type Hits: functions/type_hits.md
+      - Packages for Funtional Programming: functions/packages_funtional_programming.md
+      - User-Defined Callable Types: functions/user_defined_callable_types.md
 
 theme:
   name: material
