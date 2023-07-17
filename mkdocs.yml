@@ -13,7 +13,7 @@ nav:
       - Object References, Mutability, and Recycling: basics/object_handling.md
   - Functions:
       - Basic: functions/basic.md
-      - Parameters and Return: functions/parameters.md
+      - Parameters: functions/parameters.md
       - Anonymous/Lambda Funtions: functions/anonymous_lambda_func.md
       - High-Order Functions: functions/high_order_func.md
       - The Nine Types of Callable Objects: functions/high_order_func.md
