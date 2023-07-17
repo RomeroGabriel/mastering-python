@@ -1,7 +1,6 @@
 # Basic of Functions
 
-<!-- https://docs.python.org/3/tutorial/controlflow.html#defining-functions -->
-## Definitions
+## Definitions and Arguments
 
 The `def` keyword introduces a function definition, followed by the function name and a list of formal parameters enclosed in parentheses. The function body starts on the next line and must be indented.
 
