@@ -9,20 +9,24 @@
       
       
       
+        <link rel="prev" href="./">
       
-      <link rel="icon" href="../images/py.svg">
+      
+        <link rel="next" href="../type_hits/">
+      
+      <link rel="icon" href="../../images/py.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
-        <title>Data Model - Mastering Python</title>
+        <title>The Nine Types of Callable Objects - Mastering Python</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -38,11 +42,11 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+      <link rel="stylesheet" href="../../assets/_markdown_exec_ansi.css">
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-model" class="md-skip">
+        <a href="#higher-order-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -83,9 +87,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Mastering Python" class="md-header__button md-logo" aria-label="Mastering Python" data-md-component="logo">
+    <a href="../.." title="Mastering Python" class="md-header__button md-logo" aria-label="Mastering Python" data-md-component="logo">
       
-  <img src="../images/python.png" alt="logo">
+  <img src="../../images/python.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -101,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data Model
+              The Nine Types of Callable Objects
             
           </span>
         </div>
@@ -160,7 +164,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -175,7 +179,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../basics/python_paradigm/" class="md-tabs__link">
+      <a href="../../basics/python_paradigm/" class="md-tabs__link">
         Basics
       </a>
     </li>
@@ -185,13 +189,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../functions/basic/" class="md-tabs__link">
+      <a href="../basic/" class="md-tabs__link md-tabs__link--active">
         Functions
       </a>
     </li>
@@ -225,9 +231,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Mastering Python" class="md-nav__button md-logo" aria-label="Mastering Python" data-md-component="logo">
+    <a href="../.." title="Mastering Python" class="md-nav__button md-logo" aria-label="Mastering Python" data-md-component="logo">
       
-  <img src="../images/python.png" alt="logo">
+  <img src="../../images/python.png" alt="logo">
 
     </a>
     Mastering Python
@@ -243,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -285,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/python_paradigm/" class="md-nav__link">
+      <a href="../../basics/python_paradigm/" class="md-nav__link">
         Python Paradigms
       </a>
     </li>
@@ -299,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/variables_and_datatypes/" class="md-nav__link">
+      <a href="../../basics/variables_and_datatypes/" class="md-nav__link">
         Variables and Datatypes
       </a>
     </li>
@@ -313,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/operators/" class="md-nav__link">
+      <a href="../../basics/operators/" class="md-nav__link">
         Operators
       </a>
     </li>
@@ -327,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/control_flow/" class="md-nav__link">
+      <a href="../../basics/control_flow/" class="md-nav__link">
         Control Flow
       </a>
     </li>
@@ -341,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/exception/" class="md-nav__link">
+      <a href="../../basics/exception/" class="md-nav__link">
         Exception Handling
       </a>
     </li>
@@ -355,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/modules_packages/" class="md-nav__link">
+      <a href="../../basics/modules_packages/" class="md-nav__link">
         Modules and Packages
       </a>
     </li>
@@ -369,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/object_handling/" class="md-nav__link">
+      <a href="../../basics/object_handling/" class="md-nav__link">
         Object References, Mutability, and Recycling
       </a>
     </li>
@@ -389,14 +395,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -405,7 +413,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Functions
@@ -418,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/basic/" class="md-nav__link">
+      <a href="../basic/" class="md-nav__link">
         Basic
       </a>
     </li>
@@ -432,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/parameters/" class="md-nav__link">
+      <a href="../parameters/" class="md-nav__link">
         Parameters
       </a>
     </li>
@@ -446,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/anonymous_lambda_func/" class="md-nav__link">
+      <a href="../anonymous_lambda_func/" class="md-nav__link">
         Anonymous/Lambda Funtions
       </a>
     </li>
@@ -460,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/high_order_func/" class="md-nav__link">
+      <a href="./" class="md-nav__link">
         High-Order Functions
       </a>
     </li>
@@ -472,11 +480,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../functions/high_order_func/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         The Nine Types of Callable Objects
       </a>
+      
     </li>
   
 
@@ -488,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/type_hits/" class="md-nav__link">
+      <a href="../type_hits/" class="md-nav__link">
         Type Hits
       </a>
     </li>
@@ -502,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/packages_funtional_programming/" class="md-nav__link">
+      <a href="../packages_funtional_programming/" class="md-nav__link">
         Packages for Funtional Programming
       </a>
     </li>
@@ -516,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../functions/user_defined_callable_types/" class="md-nav__link">
+      <a href="../user_defined_callable_types/" class="md-nav__link">
         User-Defined Callable Types
       </a>
     </li>
@@ -563,7 +581,7 @@
                   
 
 
-<h1 id="data-model">Data Model</h1>
+<h1 id="higher-order-functions">Higher-Order Functions</h1>
 
 
 
@@ -601,10 +619,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tabs.instant", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>
