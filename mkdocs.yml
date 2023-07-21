@@ -40,6 +40,14 @@ theme:
 plugins:
   - search
   - markdown-exec
+  - mkdocstrings:
+      enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+      custom_templates: src
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
 
 markdown_extensions:
   - pymdownx.highlight:
