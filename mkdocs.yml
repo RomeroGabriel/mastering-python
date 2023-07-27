@@ -16,7 +16,7 @@ nav:
       - Parameters: functions/parameters.md
       - Anonymous/Lambda Funtions: functions/anonymous_lambda_func.md
       - High-Order Functions: functions/high_order_func.md
-      - The Nine Types of Callable Objects: functions/high_order_func.md
+      - The Nine Types of Callable Objects: functions/nine_types_callable_objects.md
       - Type Hits: functions/type_hits.md
       - Packages for Funtional Programming: functions/packages_funtional_programming.md
       - User-Defined Callable Types: functions/user_defined_callable_types.md
