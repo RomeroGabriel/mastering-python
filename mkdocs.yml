@@ -16,9 +16,9 @@ nav:
       - Parameters: functions/parameters.md
       - High-Order and Lambda Function: functions/hof_lamda_functions.md
       - The Nine Types of Callable Objects: functions/nine_types_callable_objects.md
+      - User-Defined Callable Types: functions/user_defined_callable_types.md
       - Type Hits: functions/type_hits.md
       - Packages for Funtional Programming: functions/packages_funtional_programming.md
-      - User-Defined Callable Types: functions/user_defined_callable_types.md
 
 theme:
   name: material
