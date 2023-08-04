@@ -18,6 +18,9 @@ nav:
       - User-Defined Callable Types: functions/user_defined_callable_types.md
       - Type Hits: functions/type_hits.md
       - Packages for Funtional Programming: functions/packages_funtional_programming.md
+  - Data Structures:
+    - Built-In Sequences: data_structures/sequence.md
+    - List: data_structures/list.md
 
 theme:
   name: material
