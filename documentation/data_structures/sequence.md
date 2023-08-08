@@ -118,4 +118,93 @@ You can use unpacking from function returns to allow functions to `return multip
 
 ## Pattern Matching
 
-<!-- TO DO -->
+> Available in Python 3.10 and above!
+
+In Python's pattern matching, the `subject` is the data following the `match` keyword, which Python aims to `match with patterns in each case clause`.  One key improvement of match over switch is `destructuring` - a more advanced form of unpacking the subject. A case clause has two parts: a `pattern` and an `optional guard with the if keyword`.
+
+For subject `sequence pattern` matching, the following is necessary:
+
+1. The subject  is a sequence;
+1. The subject and the pattern have the same number of items and;
+1. Each corresponding item matches, including nested items.
+
+```pycon exec="1" source="console" title="sequence_matching_basic.py"
+>>> def demonstration(self, message_type: list[str]) -> str:
+...     match message_type: # message_type is the SUBJECT
+...         case ['AAAA', 'BBB', 'CCC']:
+...             return 'ABC'
+...         case ['BBB', 'CCC']:
+...             return 'BC'
+...         case ['CCC']:
+...             return 'C'
+...         case _:
+...             return ''
+```
+
+```pycon exec="1" source="console" title="sequence_matching_complex.py"
+>>> metro_areas = [
+...     ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
+...     ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+...     ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+...     ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+...     ('São Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
+... ]
+>>> print(f'{"":15} | {"latitude":>9} | {"longitude":>9}')
+>>> for record in metro_areas:
+>>>     match record:  
+>>>         case [name, _, _, (lat, lon)] if lon <= 0: # using IF on case clause
+>>>             print(f'{name:15} | {lat:9.4f} | {lon:9.4f}')
+```
+
+### Special Treatment
+
+1. In sequence patterns, `both square brackets and parentheses have the same significance`;
+1. Cannot match sequences of type `str`, `bytes` and `bytearray`:
+    1. A match subject of those types is `treated as an atomic value`;
+    1. To treat as a sequence, `convert it in the match clause`;
+
+    ```pycon exec="1" source="console" title="convert_str_match.py"
+    >>> def phone_location(phone: str):
+    >>>     match tuple(phone):
+    ...         case ['1', *rest]:  # North America and Caribbean
+    ...             return 1
+    ...         case ['2', *rest]:  # Africa and some territories
+    ...             return 2
+    ...         case ['3' | '4', *rest]:  # Europe
+    ...             return 3
+    ```
+
+1. The `_` symbol: it matches any single item in that position, but it is never bound to the value to the match item:
+    1. Also, the only variable that `can appear more than once`
+
+    ```python title="using_.py"
+    # ['Shanghai', 'CN', 24.9, (31.1, 121.3)]
+    case [name, _, _, (lat, lon) as coord]: 
+    # name = Shanghai
+    # lat = 31.1
+    # lon = 121.3
+    # coord = (31.1, 121.3)
+    ```
+
+### Example
+
+First case:
+
+1. The first item must be an instance of `str`;
+1. Item 3 must be a `pair of floats`.
+
+```python title="match_by_type.py"
+case [str(name), _, _, (float(lat), float(lon))]:
+```
+
+Second case:
+
+1. Match any subject sequence `starting with a str`
+2. Ending with a `nested sequence of two floats`
+
+```python title="match_by_type.py"
+case [str(name), *_, (float(lat), float(lon))]:
+```
+
+- The `*_` matches any number of items, `without binding them to a variable`;
+- Using `*extra` instead of *_ would bind the items to `extra as a list` with 0 or more items.

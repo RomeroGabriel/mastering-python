@@ -1,5 +1,7 @@
 # List
 
+A list is a built-in data structure in Python and is classified as a type of [sequence data structure](sequence.md).
+
 ## Characteristics
 
 1. Mutable Sequence
