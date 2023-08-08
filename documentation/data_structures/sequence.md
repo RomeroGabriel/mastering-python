@@ -186,7 +186,21 @@ For subject `sequence pattern` matching, the following is necessary:
     # coord = (31.1, 121.3)
     ```
 
-### Example
+## Generator Expressions
+
+Generator expressions (gen-expr) are employed to `construct sequences`.  They `save memory by yielding items one by one` via the iterator protocol, unlike listcomps, which builds an entire list before feeding another constructor. Generator expressions share the same syntax as listcomps but `use parentheses` instead of brackets.
+
+```pycon exec="1" source="console" title="gen_enx.py"
+>>> symbols = '$¢£¥€¤'
+>>> order_symbols = tuple(ord(symbol) for symbol in symbols)
+>>> print(order_symbols)
+>>> string_int = "12345"
+>>> raw_gen = (value for value in string_int) 
+>>> print(type(raw_gen))
+>>> print(set(raw_gen))
+```
+
+## Examples
 
 First case:
 
