@@ -186,21 +186,7 @@ For subject `sequence pattern` matching, the following is necessary:
     # coord = (31.1, 121.3)
     ```
 
-## Generator Expressions
-
-Generator expressions (gen-expr) are employed to `construct sequences`.  They `save memory by yielding items one by one` via the iterator protocol, unlike listcomps, which builds an entire list before feeding another constructor. Generator expressions share the same syntax as listcomps but `use parentheses` instead of brackets.
-
-```pycon exec="1" source="console" title="gen_enx.py"
->>> symbols = '$¢£¥€¤'
->>> order_symbols = tuple(ord(symbol) for symbol in symbols)
->>> print(order_symbols)
->>> string_int = "12345"
->>> raw_gen = (value for value in string_int) 
->>> print(type(raw_gen))
->>> print(set(raw_gen))
-```
-
-## Examples
+### Examples
 
 First case:
 
@@ -222,3 +208,25 @@ case [str(name), *_, (float(lat), float(lon))]:
 
 - The `*_` matches any number of items, `without binding them to a variable`;
 - Using `*extra` instead of *_ would bind the items to `extra as a list` with 0 or more items.
+
+## Generator Expressions
+
+Generator expressions (gen-expr) are employed to `construct sequences`.  They `save memory by yielding items one by one` via the iterator protocol, unlike listcomps, which builds an entire list before feeding another constructor. Generator expressions share the same syntax as listcomps but `use parentheses` instead of brackets.
+
+Variables assigned using the "Walrus operator" `:= remain accessible after the comprehensions or expressions from which they originate return`, unlike local variables within functions. The scope of the target of := is the enclosing function, unless a global or nonlocal declaration is made for that target.
+
+```pycon exec="1" source="console" title="gen_enx.py"
+>>> symbols = '$¢£¥€¤'
+>>> order_symbols = tuple(ord(symbol) for symbol in symbols)
+>>> print(order_symbols)
+>>> string_int = "12345"
+>>> raw_gen = (value for value in string_int) 
+>>> print(type(raw_gen))
+>>> print(set(raw_gen))
+>>> codes = [last := ord(c) for c in string_int]
+>>> print(last)
+```
+
+## References
+
+- [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
