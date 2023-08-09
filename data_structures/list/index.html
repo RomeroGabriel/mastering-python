@@ -614,6 +614,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-comprehensions" class="md-nav__link">
+    List Comprehensions
+  </a>
+  
+    <nav class="md-nav" aria-label="List Comprehensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listsort-x-sorted-build-in" class="md-nav__link">
+    list.sort x sorted Build-In
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-a-list-is-not-the-answer" class="md-nav__link">
+    When a List is not the answer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    Extras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -669,6 +710,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#list-comprehensions" class="md-nav__link">
+    List Comprehensions
+  </a>
+  
+    <nav class="md-nav" aria-label="List Comprehensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listsort-x-sorted-build-in" class="md-nav__link">
+    list.sort x sorted Build-In
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-a-list-is-not-the-answer" class="md-nav__link">
+    When a List is not the answer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    Extras
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -694,8 +776,85 @@
 <p>A list is a built-in data structure in Python and is classified as a type of <a href="../sequence/">sequence data structure</a>.</p>
 <h2 id="characteristics">Characteristics</h2>
 <ol>
-<li>Mutable Sequence</li>
-<li>Container Sequence</li>
+<li><a href="../sequence/#mutable-x-immutable">Mutable Sequence</a></li>
+<li><a href="../sequence/#container-x-flat">Container Sequence</a></li>
+</ol>
+<h2 id="list-comprehensions">List Comprehensions</h2>
+<p>List comprehensions provide a concise method for <code>creating lists</code>. <a href="../sequence/#generator-expressions">Generator expressions for other kinds of sequences</a>. They are commonly used to generate new lists by <code>applying operations to elements of an existing sequence or iterable</code>, or to create a sublist of elements that fulfill specific conditions.Using list comprehensions can significantly <code>enhance the readability of your code</code>.</p>
+<p>A list comprehension consists of <code>brackets</code> containing an expression followed by a <code>for clause, then zero or more for or if clauses</code>. The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it.</p>
+<h3 id="examples">Examples</h3>
+<div class="language-pycon highlight"><span class="filename">listcomp.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;comparison with map function&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;squares =&gt; </span><span class="si">{</span><span class="n">squares</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;squares =&gt; </span><span class="si">{</span><span class="n">squares</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;comparison with filter function&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">symbols</span> <span class="o">=</span> <span class="s1">&#39;$¢£¥€¤&#39;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">beyond_ascii</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="n">symbols</span><span class="p">)))</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;beyond_ascii =&gt; </span><span class="si">{</span><span class="n">beyond_ascii</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">beyond_ascii</span> <span class="o">=</span> <span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">symbols</span> <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;beyond_ascii =&gt; </span><span class="si">{</span><span class="n">beyond_ascii</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Multiple listcomp&quot;</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">combs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">]</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">combs</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">combs</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="gp">... </span>    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]:</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="gp">... </span>        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">:</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="gp">... </span>            <span class="n">combs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">combs</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="go">comparison with map function</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="go">squares =&gt; [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="go">squares =&gt; [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="go">comparison with filter function</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="go">beyond_ascii =&gt; [162, 163, 165, 8364, 164]</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="go">beyond_ascii =&gt; [162, 163, 165, 8364, 164]</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="go">Multiple listcomp</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="go">[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="go">[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</span>
+</span></code></pre></div>
+<h2 id="listsort-x-sorted-build-in">list.sort x sorted Build-In</h2>
+<ol>
+<li>The list.sort method sorts a list in place (<code>without making a copy</code>):<ol>
+<li>It returns None - This follows an <code>important Python API convention: functions or methods that change an object in place should return None to make it clear to the caller</code>.</li>
+<li>We cannot chain calls to these methods.</li>
+</ol>
+</li>
+<li>The sorted function <code>creates a new list and returns it</code>:<ol>
+<li>It accepts any iterable object as an argument.</li>
+<li>It always returns a newly created list.</li>
+</ol>
+</li>
+<li>Both methods take two optional keyword-only arguments:<ol>
+<li><code>reverse</code>: If True, the items are returned in descending order. The default is False.</li>
+<li><code>key</code>: A one-argument function to be applied to each item.</li>
+</ol>
+</li>
+</ol>
+<div class="language-pycon highlight"><span class="filename">gen_enx.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;grape&#39;</span><span class="p">,</span> <span class="s1">&#39;raspberry&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sorted: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span><span class="si">}</span><span class="s2">, fruits: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sorted: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span><span class="w"> </span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">, fruits: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sorted: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">)</span><span class="si">}</span><span class="s2">, fruits: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sorted: </span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">fruits</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span><span class="w"> </span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="si">}</span><span class="s2">, fruits: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">fruits</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Now fruits changed: </span><span class="si">{</span><span class="n">fruits</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">sorted: [&#39;apple&#39;, &#39;banana&#39;, &#39;grape&#39;, &#39;raspberry&#39;], fruits: [&#39;grape&#39;, &#39;raspberry&#39;, &#39;apple&#39;, &#39;banana&#39;]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">sorted: [&#39;raspberry&#39;, &#39;grape&#39;, &#39;banana&#39;, &#39;apple&#39;], fruits: [&#39;grape&#39;, &#39;raspberry&#39;, &#39;apple&#39;, &#39;banana&#39;]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">sorted: [&#39;grape&#39;, &#39;apple&#39;, &#39;banana&#39;, &#39;raspberry&#39;], fruits: [&#39;grape&#39;, &#39;raspberry&#39;, &#39;apple&#39;, &#39;banana&#39;]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">sorted: [&#39;raspberry&#39;, &#39;banana&#39;, &#39;grape&#39;, &#39;apple&#39;], fruits: [&#39;grape&#39;, &#39;raspberry&#39;, &#39;apple&#39;, &#39;banana&#39;]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">Now fruits changed: [&#39;apple&#39;, &#39;banana&#39;, &#39;grape&#39;, &#39;raspberry&#39;]</span>
+</span></code></pre></div>
+<h2 id="when-a-list-is-not-the-answer">When a List is not the answer</h2>
+<ol>
+<li>An <code>array</code> saves a lot of memory when you need to handle millions of floating-point;</li>
+<li>A <code>deque</code> (double-ended queue) is more efficient <code>FIFO</code> (First-In First-out) data structure;</li>
+<li><code>Sets</code> are optimized for <code>fast membership checking</code>.</li>
+</ol>
+<h2 id="extras">Extras</h2>
+<ol>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">Methods for lists</a></li>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks">Using Lists as Stacks</a></li>
+<li><a href="https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-queues">Using Lists as Queues</a></li>
 </ol>
 <h2 id="references">References</h2>
 <ul>
