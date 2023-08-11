@@ -6,6 +6,7 @@ A list is a built-in data structure in Python and is classified as a type of [se
 
 1. [Mutable Sequence](sequence.md#mutable-x-immutable)
 1. [Container Sequence](sequence.md#container-x-flat)
+1. Use square brackets []
 
 ## List Comprehensions
 
