@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../tuple/">
+      
       
       <link rel="icon" href="../../images/py.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
@@ -201,13 +203,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../sequence/" class="md-tabs__link">
+      <a href="../sequence/" class="md-tabs__link md-tabs__link--active">
         Data Structures
       </a>
     </li>
@@ -524,14 +528,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -540,7 +546,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Data Structures
@@ -589,6 +595,123 @@
 
             
           
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Set
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Set
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    Characteristics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-set" class="md-nav__link">
+    Creating a set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-comprehensions-setcomps" class="md-nav__link">
+    Set Comprehensions (setcomps)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-must-be-hashable" class="md-nav__link">
+    Elements Must Be Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frozenset" class="md-nav__link">
+    FrozenSet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    Set Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infix-operators" class="md-nav__link">
+    Infix Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-list" class="md-nav__link">
+    Method List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -629,6 +752,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creating-a-set" class="md-nav__link">
+    Creating a set
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-comprehensions-setcomps" class="md-nav__link">
+    Set Comprehensions (setcomps)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-must-be-hashable" class="md-nav__link">
+    Elements Must Be Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frozenset" class="md-nav__link">
+    FrozenSet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-operations" class="md-nav__link">
+    Set Operations
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infix-operators" class="md-nav__link">
+    Infix Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-list" class="md-nav__link">
+    Method List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -656,11 +834,67 @@
 <ol>
 <li><a href="../sequence/#mutable-x-immutable">Mutable Sequence</a></li>
 <li><a href="../sequence/#container-x-flat">Container Sequence</a></li>
-<li>Eliminate all duplicates</li>
+<li><code>Eliminate all duplicates</code></li>
 <li>Unordered</li>
 <li>Support mathematical operations like union, intersection, difference, and symmetric difference</li>
-<li>Usually homogeneous</li>
+<li>Use braces  {}</li>
+<li>Implemented using a hash table, a property also applicable to FrozenSets.</li>
+<li>Membership testing is very efficient</li>
 </ol>
+<h2 id="creating-a-set">Creating a set</h2>
+<p>Utilizing literal set syntax such as <code>{1, 2, 3} is not only quicker but also enhances readability</code> compared to employing the constructor like set([1, 2, 3]). The constructor approach is slower due to the need for Python to search for the set's constructor, compile a list, and subsequently pass it to the constructor.</p>
+<div class="language-pycon highlight"><span class="filename">creating_set.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;using </span><span class="se">{{}}</span><span class="s2"> to create: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;using </span><span class="se">{{}}</span><span class="s2"> to create: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">using {} to create: &lt;class &#39;set&#39;&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">{1}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">1</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="go">set()</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="go">using {} to create: &lt;class &#39;set&#39;&gt;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="go">{1, 2, 3}</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="go">1</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="go">{2, 3}</span>
+</span></code></pre></div>
+<h2 id="set-comprehensions-setcomps">Set Comprehensions (setcomps)</h2>
+<div class="language-pycon highlight"><span class="filename">setcomps.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">name</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">setcomp</span> <span class="o">=</span> <span class="p">{</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span> <span class="k">if</span> <span class="s1">&#39;SIGN&#39;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">)}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">setcomp</span><span class="p">))</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">setcomp</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">&lt;class &#39;set&#39;&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">{&#39;#&#39;, &#39;§&#39;, &#39;¢&#39;, &#39;°&#39;, &#39;µ&#39;, &#39;=&#39;, &#39;÷&#39;, &#39;%&#39;, &#39;±&#39;, &#39;£&#39;, &#39;+&#39;, &#39;&lt;&#39;, &#39;¶&#39;, &#39;¥&#39;, &#39;×&#39;, &#39;©&#39;, &#39;¤&#39;, &#39;&gt;&#39;, &#39;$&#39;, &#39;®&#39;, &#39;¬&#39;}</span>
+</span></code></pre></div>
+<h2 id="elements-must-be-hashable">Elements Must Be Hashable</h2>
+<p><code>Elements within a set must be hashable objects</code>, complete with appropriate implementations of <code>__hash__</code> and <code>__eq__</code> methods. It's important to note that the <code>set type itself isn't hashable</code>, preventing the construction of sets with nested set instances. However, <a href="#frozenset">FrozenSet</a> is hashable, allowing for the inclusion of frozenset elements within a set.</p>
+<h2 id="frozenset">FrozenSet</h2>
+<p><code>A FrozenSet is an immutable variation of a set</code>. Unlike sets, there is no distinct syntax to denote frozenset literals. Instead, they are generated by invoking the constructor.</p>
+<div class="language-pycon highlight"><span class="filename">frozen_set.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">my_frozen</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_frozen</span><span class="p">))</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_frozen</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">&lt;class &#39;frozenset&#39;&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">frozenset({0, 1, 2, 3, 4, 5, 6, 7, 8, 9})</span>
+</span></code></pre></div>
+<h2 id="set-operations">Set Operations</h2>
+<h3 id="infix-operators">Infix Operators</h3>
+<div class="language-pycon highlight"><span class="filename">frozen_set.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;UNION of A and B: </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;INTERSECTION of A and B: </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DIFFERENCE of A and B: </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SYMMETRIC DIFFERENCE of A and B: </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go">UNION of A and B: {1, 2, 3, 4, 5}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="go">INTERSECTION of A and B: {3}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">DIFFERENCE of A and B: {1, 2}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">SYMMETRIC DIFFERENCE of A and B: {1, 2, 4, 5}</span>
+</span></code></pre></div>
+<h3 id="method-list">Method List</h3>
+<p><a href="https://docs.python.org/3/library/stdtypes.html#set">Python Set documentation</a> for a comprehensive list of set and frozen set methods and operations.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python, 2nd Edition</a></li>
