@@ -22,6 +22,7 @@ nav:
     - Built-In Sequences: data_structures/sequence.md
     - List: data_structures/list.md
     - Tuple: data_structures/tuple.md
+    - Set: data_structures/set.md
 
 theme:
   name: material
