@@ -11,6 +11,7 @@ nav:
       - Exception Handling: basics/exception.md
       - Modules and Packages: basics/modules_packages.md
       - Object References, Mutability, and Recycling: basics/object_handling.md
+      - Hashable Objects: basics/hashable.md
   - Functions:
       - Basic: functions/basic.md
       - Parameters: functions/parameters.md
@@ -23,6 +24,7 @@ nav:
     - List: data_structures/list.md
     - Tuple: data_structures/tuple.md
     - Set: data_structures/set.md
+    # - Dict: data_structures/dict.md
 
 theme:
   name: material
@@ -53,6 +55,7 @@ plugins:
             show_source: true
 
 markdown_extensions:
+  - footnotes
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
