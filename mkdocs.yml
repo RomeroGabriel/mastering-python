@@ -24,7 +24,7 @@ nav:
     - List: data_structures/list.md
     - Tuple: data_structures/tuple.md
     - Set: data_structures/set.md
-    # - Dict: data_structures/dict.md
+    - Dict: data_structures/dict.md
 
 theme:
   name: material
