@@ -25,6 +25,9 @@ nav:
     - Tuple: data_structures/tuple.md
     - Set: data_structures/set.md
     - Dict: data_structures/dict.md
+  - Closures and Decorators:
+    - Closures: decorators_closures/closures.md
+    - Decorators: decorators_closures/decorators.md
 
 theme:
   name: material
@@ -56,6 +59,8 @@ plugins:
 
 markdown_extensions:
   - footnotes
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
