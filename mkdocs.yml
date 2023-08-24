@@ -15,6 +15,7 @@ nav:
   - Functions:
       - Basic: functions/basic.md
       - Parameters: functions/parameters.md
+      - Variables Scope: functions/variables_scope.md
       - High-Order and Lambda Function: functions/hof_lamda_functions.md
       - User-Defined Callable Types: functions/user_defined_callable_types.md
       - Type Hits: functions/type_hits.md
