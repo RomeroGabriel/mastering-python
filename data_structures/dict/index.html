@@ -12,6 +12,8 @@
         <link rel="prev" href="../set/">
       
       
+        <link rel="next" href="../../decorators_closures/closures/">
+      
       <link rel="icon" href="../../images/py.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
@@ -213,6 +215,22 @@
     <li class="md-tabs__item">
       <a href="../sequence/" class="md-tabs__link md-tabs__link--active">
         Data Structures
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../decorators_closures/closures/" class="md-tabs__link">
+        Closures and Decorators
       </a>
     </li>
   
@@ -480,6 +498,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../functions/variables_scope/" class="md-nav__link">
+        Variables Scope
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../functions/hof_lamda_functions/" class="md-nav__link">
         High-Order and Lambda Function
       </a>
@@ -691,8 +723,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-matching" class="md-nav__link">
-    Patterns Matching
+  <a href="#pattern-matching" class="md-nav__link">
+    Pattern Matching
   </a>
   
 </li>
@@ -700,6 +732,34 @@
         <li class="md-nav__item">
   <a href="#getting-inserting-or-updating" class="md-nav__link">
     Getting, Inserting or Updating
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting" class="md-nav__link">
+    Getting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-missing-keys" class="md-nav__link">
+    Handling Missing Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations-of-dict" class="md-nav__link">
+    Variations of Dict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immutable-mappings" class="md-nav__link">
+    Immutable Mappings
   </a>
   
 </li>
@@ -715,6 +775,69 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Closures and Decorators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Closures and Decorators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decorators_closures/closures/" class="md-nav__link">
+        Closures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decorators_closures/decorators/" class="md-nav__link">
+        Decorators
+      </a>
     </li>
   
 
@@ -781,8 +904,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-matching" class="md-nav__link">
-    Patterns Matching
+  <a href="#pattern-matching" class="md-nav__link">
+    Pattern Matching
   </a>
   
 </li>
@@ -790,6 +913,34 @@
         <li class="md-nav__item">
   <a href="#getting-inserting-or-updating" class="md-nav__link">
     Getting, Inserting or Updating
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting" class="md-nav__link">
+    Getting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-missing-keys" class="md-nav__link">
+    Handling Missing Keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variations-of-dict" class="md-nav__link">
+    Variations of Dict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#immutable-mappings" class="md-nav__link">
+    Immutable Mappings
   </a>
   
 </li>
@@ -822,6 +973,25 @@
 <ol>
 <li><a href="../sequence/#mutable-x-immutable">Mutable Sequence</a></li>
 <li>Implemented using a hash table, highly optimized</li>
+<li>
+<details class="info">
+<summary><code>Key</code> must be hashable objects</summary>
+They must implement proper <code>__hash__</code> and <code>__eq__</code> methods;</details>
+</li>
+<li>
+<details class="info">
+<summary><code>Item access by key is very fast</code></summary>
+<p>Python can locate a key directly by computing the hash code of the key;</p>
+</details>
+</li>
+<li>
+<p><code>Key ordering is preserved</code> as a side effect of a more compact memory layout;</p>
+</li>
+<li>
+<details class="info">
+<summary>Dicts inevitably have a significant memory overhead</summary>
+They most compact internal data structure for a container would be an array of pointers to the items. Compared to that, a hash table <code>needs to store more data per entry, and Python needs to keep at least one-third of the hash table rows empty to remain efficient</code></details>
+</li>
 </ol>
 <h2 id="dict-comprehensions">Dict Comprehensions</h2>
 <p>A dictcomp (dict comprehension) build a dict instance by taking key:value pairs from any iterable.</p>
@@ -863,8 +1033,74 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">--------------------------</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">d1 = {&#39;a&#39;: 2, &#39;b&#39;: 4, &#39;c&#39;: 6} and d2 {&#39;a&#39;: 2, &#39;b&#39;: 4, &#39;c&#39;: 6}. Now d1 was updated</span>
 </span></code></pre></div>
-<h2 id="patterns-matching">Patterns Matching</h2>
+<h2 id="pattern-matching">Pattern Matching</h2>
+<blockquote>
+<p>Available in Python 3.10 and above!</p>
+</blockquote>
+<p>In Python's pattern matching, the <code>subject</code> is the data following the <code>match</code> keyword, which Python aims to <code>match with patterns in each case clause</code>.  One key improvement of match over switch is <code>destructuring</code> - a more advanced form of unpacking the subject. A case clause has two parts: a <code>pattern</code> and an <code>optional guard with the if keyword</code>.</p>
+<p>For subject <code>mapping pattern</code> matching, the following is necessary:</p>
+<ol>
+<li>The subject  is a instance of any actual or virtual subclass of <code>collections.abc.Mapping</code>;</li>
+<li>The <code>key orders is irrelevant</code>, even for OrderedDict;</li>
+<li>Mapping patterns succeed on <code>partial match</code>.</li>
+<li>You can prefix one variable with <code>** to capture extra key-value pairs</code> - It must be the last in the pattern;</li>
+</ol>
+<div class="language-pycon highlight"><span class="filename">pattern_matching.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">get_creators</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="k">match</span> <span class="n">record</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">... </span>        <span class="k">case</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;book&#39;</span><span class="p">,</span> <span class="s1">&#39;api&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;authors&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">*</span><span class="n">names</span><span class="p">]}:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type == book, api == 2 and &#39;&#39;authors&#39; key mapped to sequence&#39;&quot;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp">... </span>            <span class="k">return</span> <span class="n">names</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp">... </span>        <span class="k">case</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;book&#39;</span><span class="p">,</span> <span class="s1">&#39;api&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;author&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">}:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type == book, api == 2 and &#39;authors&#39; key mapped to any object&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp">... </span>            <span class="k">return</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">... </span>        <span class="k">case</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;book&#39;</span><span class="p">}:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="gp">... </span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No creators on dict&quot;</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid &#39;book&#39; record: </span><span class="si">{</span><span class="n">record</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="gp">... </span>        <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Invalid record: </span><span class="si">{</span><span class="n">record</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="gp">... </span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">b1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">api</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s1">&#39;Douglas Hofstadter&#39;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="gp">... </span>        <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;book&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gödel, Escher, Bach&#39;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;get_creators of b1: </span><span class="si">{</span><span class="n">get_creators</span><span class="p">(</span><span class="n">b1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">b2</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="n">api</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;book&#39;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="gp">... </span>        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Python in a Nutshell&#39;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="gp">... </span>        <span class="n">authors</span><span class="o">=</span><span class="s1">&#39;Martelli Ravenscroft Holden&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;get_creators of b2: </span><span class="si">{</span><span class="n">get_creators</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="gp">... </span>    <span class="n">get_creators</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;book&#39;</span><span class="p">,</span> <span class="s1">&#39;pages&#39;</span><span class="p">:</span> <span class="mi">770</span><span class="p">})</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="gp">... </span><span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="gp">... </span>    <span class="n">get_creators</span><span class="p">(</span><span class="s1">&#39;Spam, spam, spam&#39;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="gp">... </span><span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="go">type == book, api == 2 and &#39;authors&#39; key mapped to any object</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="go">get_creators of b1: [&#39;Douglas Hofstadter&#39;]</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="go">type == book, api == 2 and &#39;&#39;authors&#39; key mapped to sequence&#39;</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="go">get_creators of b2: [&#39;Martelli&#39;, &#39;Ravenscroft&#39;, &#39;Holden&#39;]</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="go">No creators on dict</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="go">Error: Invalid &#39;book&#39; record: {&#39;type&#39;: &#39;book&#39;, &#39;pages&#39;: 770}</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="go">Error: Invalid record: &#39;Spam, spam, spam&#39;</span>
+</span></code></pre></div>
+<div class="language-pycon highlight"><span class="filename">pattern_matching_partial_match.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">food</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">category</span><span class="o">=</span><span class="s1">&#39;ice cream&#39;</span><span class="p">,</span> <span class="n">flavor</span><span class="o">=</span><span class="s1">&#39;vanilla&#39;</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">199</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">match</span> <span class="n">food</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">... </span>    <span class="k">case</span> <span class="p">{</span><span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;ice cream&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">details</span><span class="p">}:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Ice cream details: </span><span class="si">{</span><span class="n">details</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">Ice cream details: {&#39;flavor&#39;: &#39;vanilla&#39;, &#39;cost&#39;: 199}</span>
+</span></code></pre></div>
 <h2 id="getting-inserting-or-updating">Getting, Inserting or Updating</h2>
+<h2 id="getting">Getting</h2>
+<p>Dict acess with d[k] raises an error when k is not existing key. d.get(k, default) is an alternative whenever a default value is more convenient that handling KeyError</p>
+<h2 id="handling-missing-keys">Handling Missing Keys</h2>
+<h2 id="variations-of-dict">Variations of Dict</h2>
+<h2 id="immutable-mappings">Immutable Mappings</h2>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python, 2nd Edition</a></li>
