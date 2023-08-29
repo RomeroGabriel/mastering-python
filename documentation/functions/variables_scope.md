@@ -45,6 +45,20 @@ In Python, there's `no requirement to declare variables explicitly`, but the `in
 
 ## Variable Lookup Logic
 
+When defining a function, the Python decides how to access a variable like `x` within it, following these rules for each situation:
+
+### Referenced and Assigned
+
+1. If there's a `global x` declaration, the x variable is `fetched from and assigned to the global variable x in the module`;
+1. When a `nonlocal x` declaration is present, x is `taken from and assigned to the local variable x` within the closest surrounding function where x is defined;
+1. If `x is either a parameter or assigned a value within the function body`, it becomes the local variable.
+
+### Just Referenced and is not a Parameter
+
+1. x will be `searched in nonlocal scopes`. So, in the local scopes of the enclosing function bodies;
+1. If not in nonlocal scopes, x will be `searched in the module global scope`;
+1. If not in module global scope, x will be `searched in the __builtins__.__dict__`;
+
 ## Comparing bytecodes
 
 ```pycon exec="1" source="console"  title="bytecodes_compare.py"
