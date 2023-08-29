@@ -36,12 +36,14 @@ In Python, there's `no requirement to declare variables explicitly`, but the `in
 
 ## Types of Scope
 
-1. Module Global Scope
-    - Made of names assigned to values `outside of any class or function block`.
-1. Function Local Scope
-    - Made of names assigned to values as `parameters, or directly in the body of the function`.
-1. Nonlocal Scope
-    - TODO
+1. ??? info "Module Global Scope"
+    Made of names assigned to values `outside of any class or function block`.
+1. ??? info "Function Local Scope"
+    Made of names assigned to values as `parameters, or directly in the body of the function`.
+1. ??? info "Nonlocal Scope"
+    The nonlocal scope refer to all those variables that are `declared within nested functions`. The `nonlocal keyword is used to work with variables inside nested functions`, where the variable should not belong to the inner function. It lets you declare a variable as a `free variable`.
+
+## Variable Lookup Logic
 
 ## Comparing bytecodes
 
@@ -71,4 +73,6 @@ In Python, there's `no requirement to declare variables explicitly`, but the `in
 
 ## References
 
+- [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
 - [Python - 4.8. More on Defining Functions](https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions)
+- [Python nonlocal Keyword](https://www.w3schools.com/python/ref_keyword_nonlocal.asp)
