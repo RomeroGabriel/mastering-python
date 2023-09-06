@@ -3,6 +3,9 @@ docs_dir: "documentation"
 
 nav:
   - Home: index.md
+  - Built-In Examples:
+    - Functools Module: builtin_modules_examples/functools_module.md
+    - Operator Module: builtin_modules_examples/operator_module.md
   - Basics:
       - Python Paradigms: basics/python_paradigm.md
       - Variables and Datatypes: basics/variables_and_datatypes.md
@@ -19,7 +22,6 @@ nav:
       - High-Order and Lambda Function: functions/hof_lamda_functions.md
       - User-Defined Callable Types: functions/user_defined_callable_types.md
       - Type Hits: functions/type_hits.md
-      - Packages for Funtional Programming: functions/packages_funtional_programming.md
   - Data Structures:
     - Built-In Sequences: data_structures/sequence.md
     - List: data_structures/list.md
