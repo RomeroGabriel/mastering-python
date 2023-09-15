@@ -17,13 +17,18 @@ In Python, strategy pattern can be simpler using functions as first-class object
     1. A 10% discount is applied to each line item that contains 20 or more units in the same order.
     1. Orders with at least 10 distinct items receive a 7% discount on the entire order.
 
-    ### Context
-    Context refers to the `service provided, which delegates some of its computation to interchangeable components that implement different discount algorithms`. In the ecommerce example, the context is represented by an `Order`, and it can be configured to apply a promotional discount based on one of several algorithms.
+    **Context**
 
-    ### Strategy
+    Context refers to the `service provided, which delegates some of its computation to interchangeable components that implement different discount algorithms`. In the ecommerce example, the context is represented by an `Order`, and it can be configured to apply a promotional discount based on one of several algorithms.
+    
+    ---
+    **Strategy**
+
     The `common interface shared among the components that implement` these different discount algorithms. In the ecommerce example, use an abstract class called `Promotion` to fulfill this role.
 
-    ### Concrete Strategy
+    ---
+    **Concrete Strategy**
+    
     Refers to one of the specific implementations of the Strategy interface. In the ecommerce example, there are three concrete strategies: `FidelityPromo`, `BulkPromo`, and `LargeOrderPromo`.
 
 ??? example "Function-Oriented Strategy"
@@ -106,7 +111,54 @@ In Python, strategy pattern can be simpler using functions as first-class object
 
 `Using the first-class functions approach reduces the runtime cost of instantiating the Order object every time`. When using classes, to avoid this issue, it is recommended to use another design pattern, such as the Flyweight pattern, which can make the code more complex.
 
-## Decorator-Enhanced Strategy Pattern
+### Decorator-Enhanced Strategy Pattern
+
+Using the `best_promo` function as shown in the above example, `it's necessary to add every new promotion function to the promos array.` This can be prone to errors if someone forgets to add the new function to the promos array. Using a decorator can solve this problem.
+
+??? example "Decorator-Enhanced Strategy Pattern code"
+
+    ```python title="decorator_strategy.py"
+
+    from typing import Callable, NamedTuple
+    Promotion = Callable[[Order], Decimal]
+    # The promos list is a module global, and starts empty.
+    promos: list[Promotion] = []
+
+    def promotion(promo: Promotion) -> Promotion:
+        promos.append(promo)
+        return promo
+
+    def best_promo(order: Order) -> Decimal:
+        return max(promo(order) for promo in promos)
+
+    @promotion
+    def fidelity(order: Order) -> Decimal:
+        if order.customer.fidelity >= 1000:
+            return order.total() * Decimal('0.05')
+        return Decimal(0)
+    
+    @promotion
+    def bulk_item(order: Order) -> Decimal:
+        discount = Decimal(0)
+        for item in order.cart:
+            if item.quantity >= 20:
+                discount += item.total() * Decimal('0.1')
+        return discount
+
+    @promotion
+    def large_order(order: Order) -> Decimal:
+        distinct_items = {item.product for item in order.cart}
+        if len(distinct_items) >= 10:
+            return order.total() * Decimal('0.07')
+        return Decimal(0)
+    ```
+
+PROS:
+
+1. `promotion function is a registration decorator`: it returns the promo function unchanged, after appending into the promos list.
+1. Any function decorated by @promotion will be added;
+1. To disable a promotion is just comment out the decorator;
+1. Promotional discount strategies may be defined in any module, anywhere in the system - is just necessary apply @promotion decorator;
 
 ## Command with First-Class Functions
 
