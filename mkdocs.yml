@@ -15,6 +15,9 @@ nav:
       - Modules and Packages: basics/modules_packages.md
       - Object References, Mutability, and Recycling: basics/object_handling.md
       - Hashable Objects: basics/hashable.md
+  - Objects:
+      - Classes: classes_objects/basic_classes.md
+      - Data Model: classes_objects/data_model.md
   - Functions:
       - Basic: functions/basic.md
       - Parameters: functions/parameters.md
