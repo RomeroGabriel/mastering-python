@@ -78,6 +78,24 @@ If a class doesn't have a `.__format__` method defined, it will inherit the beha
     >>> print(format(obj_nice, "n"))
     ```
 
+## Supporting Positional Pattern Matching
+
+For a class to support positional pattern matching, you need to add a `__match_args__` class attribute. This attribute should `list the instance attributes in the order they will be used during pattern matching`. It's important to note that `__match_args__ doesn't have to include all public instance attributes`. Typically, you include the required arguments from the `__init__` method in __match_args, `but optional arguments may be omitted`.
+
+??? example "Matching Support"
+
+    ``` py title="src/classes_objects/matching_supp.py"
+    --8<-- "src/classes_objects/matching_supp.py"
+    ```
+
+    ```bash title="output"
+    Vector(x=0, y=0) is null
+    Vector(x=0, y=2) is vertical
+    Vector(x=2, y=0) is horizontal
+    Vector(x=1, y=1) is diagonal
+    Vector(x=2, y=11) is awesome
+    ```
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
