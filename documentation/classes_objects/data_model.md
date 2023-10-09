@@ -4,6 +4,14 @@ With the Python Data Model, `user-defined types can mimic the behavior of built-
 
 `Think of the data model as a description of Python as a framework: It formalizes interfaces for our objects to behave like standard Python data structures` such as sequences, iterators, coroutines, classes, context managers, and so on. The Python interpreter `invokes these special methods to perform basic object operations, often triggered by special syntax`. These special method names are always written with leading and trailing double underscores, and they are also referred to as `"dunder" methods`.
 
+## Protocols and Duck Typing
+
+With duck typing, `you don't need to inherit from any special class to create fully functional behaviors` like a sequence type in Python. `You just need to implement the methods that fulfill the sequence protocol`. In the context of object-oriented programming, a protocol is an informal interface defined only in documentation, not in code.
+
+For instance, the `sequence protocol in Python requires only the __len__ and __getitem__ methods.` `Any class that implements these methods with the standard signature and semantics can be used wherever a sequence is expected`. Whether the class is a subclass of something else is irrelevant; `all that matters is that it provides the necessary methods.`
+
+Since `protocols are informal and unenforced`, you can often implement `just part of a protocol`, especially if you `know the specific context where a class will be used`. For example, to support iteration, you only need to provide the \__getitem__ method; there's no need to include \__len__.
+
 ## Object Representations
 
 Python offers two methods for obtaining a string representation from any object:
