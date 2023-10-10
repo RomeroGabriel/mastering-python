@@ -10,7 +10,53 @@ With duck typing, `you don't need to inherit from any special class to create fu
 
 For instance, the `sequence protocol in Python requires only the __len__ and __getitem__ methods.` `Any class that implements these methods with the standard signature and semantics can be used wherever a sequence is expected`. Whether the class is a subclass of something else is irrelevant; `all that matters is that it provides the necessary methods.`
 
-Since `protocols are informal and unenforced`, you can often implement `just part of a protocol`, especially if you `know the specific context where a class will be used`. For example, to support iteration, you only need to provide the \__getitem__ method; there's no need to include \__len__.
+Since `protocols are informal and unenforced`, you can often implement `just part of a protocol`, especially if you `know the specific context where a class will be used`. For example, to support iteration, you only need to provide the `__getitem__` method; there's no need to include \__len__.
+
+## Sequence Protocol
+
+To create a class that can behave like a sequence in Python, you only need to implement two methods: `__len__` and `__getitem__`.
+
+??? info "`__len__`"
+    When a class implements `__len__`, you can use the `len()` function with instances of that class.
+
+??? info "`__getitem__`"
+    When a class implements `__getitem__`, you can `access items in it just like you would with regular Python collections.`
+
+??? example
+
+    ``` py title="src/data_model/sequence_protocol_basic.py"
+    --8<-- "src/data_model/sequence_protocol_basic.py"
+    ```
+
+    ```bash title="output"
+    len of v1: 5
+    5
+    3
+    [1, 2]
+    [2, 3, 4, 5]
+    Is 5 in v1? True
+    Is 15 in v1? False
+    ```
+
+### More Complete Sequence Protocol
+
+To ensure that when an object is sliced, the `returned object is of the same type as the original object`, you need to implement a more comprehensive `__getitem__` method. This method should handle slicing and return an instance of the same class with the sliced elements.
+
+??? example
+
+    ``` py title="src/data_model/sequence_protocol_deep.py"
+    --8<-- "src/data_model/sequence_protocol_deep.py"
+    ```
+
+    ```bash title="output"
+    len of v1: 5
+    5
+    3
+    Vector ([1, 2])
+    <class '__main__.Vector'>
+    Vector ([2, 3, 4, 5])
+    <class '__main__.Vector'>
+    ```
 
 ## Object Representations
 
