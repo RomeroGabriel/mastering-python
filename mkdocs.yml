@@ -3,9 +3,6 @@ docs_dir: "documentation"
 
 nav:
   - Home: index.md
-  - Built-In Examples:
-    - Functools Module: builtin_modules_examples/functools_module.md
-    - Operator Module: builtin_modules_examples/operator_module.md
   - Basics:
       - Python Paradigms: basics/python_paradigm.md
       - Variables and Datatypes: basics/variables_and_datatypes.md
@@ -18,6 +15,7 @@ nav:
   - Objects:
       - Classes: classes_objects/basic_classes.md
       - Data Model: classes_objects/data_model.md
+      - Interfaces, Protocols, and ABCs: interfaces_protocols_abc.md
   - Functions:
       - Basic: functions/basic.md
       - Parameters: functions/parameters.md
@@ -35,6 +33,9 @@ nav:
     - Closures: decorators_closures/closures.md
     - Decorators: decorators_closures/decorators.md
   - Design Patterns: design_patterns/index.md
+  - Built-In Examples:
+    - Functools Module: builtin_modules_examples/functools_module.md
+    - Operator Module: builtin_modules_examples/operator_module.md
 
 theme:
   name: material
