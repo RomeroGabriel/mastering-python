@@ -15,3 +15,15 @@ The concept of interfaces in programming languages can be approached in various 
     Inspired by the Go language, Python introduced support for this approach in version 3.8 through `subclasses of typing.Protocol`. `Similar to static typing, it is enforced by external type checkers`.
 
 ## The Typing Map
+
+The four typing approaches depicted in the image are complementary: they have different pros and cons. It doesn’t make sense to dismiss any of them. Each of these four approaches rely on interfaces to work, but static typing can be done—poorly—using only concrete types instead of interface abstractions like protocols and abstract base classes.
+
+!!! quote ""
+    ![Typing Map. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/classes_objects/typing_map.png)
+    [Typing Map. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/classes_objects/typing_map.png)
+
+## Duck and Static Duck Typing
+
+## Programming Ducks
+
+## Goose Typing
