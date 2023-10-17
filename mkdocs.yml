@@ -15,7 +15,7 @@ nav:
   - Objects:
       - Classes: classes_objects/basic_classes.md
       - Data Model: classes_objects/data_model.md
-      - Interfaces, Protocols, and ABCs: interfaces_protocols_abc.md
+      - Interfaces, Protocols, and ABCs: classes_objects/interfaces_protocols_abc.md
   - Functions:
       - Basic: functions/basic.md
       - Parameters: functions/parameters.md
