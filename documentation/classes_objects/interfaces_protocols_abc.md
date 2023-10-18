@@ -24,6 +24,38 @@ The four typing approaches depicted in the image are complementary: they have di
 
 ## Duck and Static Duck Typing
 
-## Programming Ducks
+In Python, the concept of a `protocol refers to an informal interface`. With the integration of [PEP 544—Protocols: Structural subtyping (static duck typing)](https://peps.python.org/pep-0544/) in Python 3.8, the `term protocol has acquired an additional`, closely related yet distinct, meaning in the context of Python. `This PEP enables the creation of subclasses of typing.Protocol to define one or more methods that a class must implement or inherit to satisfy a static type checker`.
+
+!!! info "Dynamic Protocol"
+    `Refers to the implicit and convention-based protocols that have always existed in Python`. These protocols are [described in the documentation](https://docs.python.org/3/reference/datamodel.html) and are integral to the Python language. They are fundamentally flexible, allowing objects to implement only a portion of the protocol while still retaining their utility.
+
+!!! info "Static Protocol"
+    Defined by [PEP 544](https://peps.python.org/pep-0544/), it represents a protocol that `requires an explicit definition, typically through a typing.Protocol subclass` since Python 3.8. `Objects implementing a static protocol must provide every method declared in the protocol class, even if not all methods are needed by the program`.
+
+__Key Differences between Dynamic and Static Protocols__:
+
+1. An object can `implement only a part of a dynamic protocol and still be functional`, whereas a `static protocol mandates the provision of every method declared in the protocol class`, irrespective of the program's requirements.
+1. `Static protocols can be verified by static type checkers`, which is not possible for dynamic protocols.
+
+Python offers another explicit means of defining an interface in code: the `abstract base class (ABC)`.
+
+## Programming Ducks - Dynamic Protocols
+
+### Monkey Patching: Implementing a Protocol at Runtime
+
+Monkey patching is dynamically `changing` a module, class, or function `at runtime`, to add features or fix bugs.  `It involves changing or adding attributes without altering its source code`.
+
+??? warning
+    While it can be a powerful tool in certain situations, `it should be used with caution as it can make code more difficult to understand and maintain`. Therefore, it is generally advisable to use monkey patching judiciously and consider alternative approaches, such as subclassing or proper design patterns, when possible.
+
+??? example
+
+    ``` py title="src/classes_objects/monkey_patching.py"
+    --8<-- "src/classes_objects/monkey_patching.py"
+    ```
+    ```bash title="output"
+    This is the original method.
+    Patched behavior
+    ```
 
 ## Goose Typing
