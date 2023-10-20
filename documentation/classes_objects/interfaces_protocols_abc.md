@@ -59,3 +59,57 @@ Monkey patching is dynamically `changing` a module, class, or function `at runti
     ```
 
 ## Goose Typing
+
+In Python, the concept of `goose typing refers to a runtime type-checking approach that utilizes Abstract Base Classes (ABCs)`. Unlike languages with explicit interfaces, `Python relies on ABCs to define interfaces for the purpose of type checking`, both at runtime and with static type checkers.
+
+`Abstract base classes enhance duck typing by introducing virtual subclasses, which are classes that do not directly inherit from a particular class but are still recognized by functions like isinstance() and issubclass()`. This runtime type checking approach is made possible by the usage of ABCs.
+
+In practice, `goose typing allows the use of isinstance(obj, cls) where cls is an abstract base class with a metaclass of abc.ABCMeta`. It is important to note that sometimes there is no need to register a class explicitly for it to be recognized as a subclass of an ABC.
+
+??? example "subclass of an ABC without register"
+
+    ```pycon exec="1" source="console"
+    >>> class Struggle:
+    ...     def __len__(self): return 23
+    >>> from collections import abc
+    >>> print(isinstance(Struggle(), abc.Sized))
+    ```
+
+To summarize, goose typing involves:
+
+1. `Creating subclasses from ABCs to explicitly indicate that you are implementing a previously defined interface`.
+1. `Using ABCs for runtime type checking instead of concrete classes` as arguments for `isinstance` and `issubclass`.
+
+By employing ABCs for type checking, you can achieve more flexibility in your code. This approach allows for `greater polymorphism`, as components can `implement required methods without necessarily explicitly subclassing the ABC`. If needed, a component can always be registered later to pass explicit type checks.
+
+### Subclassing an ABC
+
+When `subclassing` an Abstract Base Class (ABC), `the implementation of abstract methods is not checked during the import` of the module. Instead, it is c`hecked only at runtime when attempting to instantiate an object`. If `any of the abstract methods are not implemented`, a TypeError exception is raised with a message indicating that the abstract methods are missing, even if your class does not require these specific behaviors.
+
+Therefore, `it's crucial to ensure that all required abstract methods are implemented in your subclass to avoid runtime errors`. Even if certain functionalities are not needed for a particular subclass, their implementation is still mandatory to satisfy the requirements of the ABC and ensure proper instantiation and functionality during runtime.
+
+??? example
+
+    ```python
+    class MyABC(abc.ABC):
+        @classmethod
+        @abc.abstractmethod
+        def an_abstract_classmethod(cls, ...):
+            pass
+    ```
+
+### ABCs in the Standard Library
+
+Abstract Base Classes (ABCs) are `primarily found in the collections.abc module`, although some others exist in modules like io and numbers. The `abc` module itself is also present, `containing the abc.ABC class`. While `every ABC depends on the abc module`, it is not necessary to import it explicitly unless you are creating a new ABC.
+
+The `collections.abc` module is extensively used, and its [documentation features a helpful table](https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes) that `summarizes the various ABCs, their relationships, as well as their abstract and concrete methods, often referred to as mixin methods`. This table provides a clear overview of the ABCs available in the standard library, allowing developers to understand their functionalities and relationships at a glance.
+
+### A Virtual Subclass of an ABC
+
+In goose typing, one of the notable features is the ability to `register a class as a virtual subclass of an Abstract Base Class (ABC), even if the class does not inherit from it`. By registering the class as a virtual subclass, you are essentially `asserting that the class faithfully implements the interface defined in the ABC, and Python will accept this assertion without performing a direct check`. However, if the class fails to implement the necessary methods as promised, Python will raise the usual runtime exceptions.
+
+This registration process involves `calling a class method`, often named `register`, on the `ABC`. `Once the class is registered, it becomes a virtual subclass of the ABC`, and Python recognizes it as such through functions like `issubclass`. It's important to note that the `registered class does not inherit any methods or attributes from the ABC`. The register method can be invoked as a standard function, or it can be used as a decorator to streamline the process.
+
+It's important to understand that `inheritance is guided by a special class attribute named __mro__`, which stands for `Method Resolution Order`. This attribute `lists the class and its superclasses in the order that Python uses to search for methods`. Notably, `ABCs are not included in the __mro__ attribute`, meaning `they do not participate in the regular inheritance hierarchy`.
+
+## Static Protocols
