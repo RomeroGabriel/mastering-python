@@ -111,5 +111,3 @@ In goose typing, one of the notable features is the ability to `register a class
 This registration process involves `calling a class method`, often named `register`, on the `ABC`. `Once the class is registered, it becomes a virtual subclass of the ABC`, and Python recognizes it as such through functions like `issubclass`. It's important to note that the `registered class does not inherit any methods or attributes from the ABC`. The register method can be invoked as a standard function, or it can be used as a decorator to streamline the process.
 
 It's important to understand that `inheritance is guided by a special class attribute named __mro__`, which stands for `Method Resolution Order`. This attribute `lists the class and its superclasses in the order that Python uses to search for methods`. Notably, `ABCs are not included in the __mro__ attribute`, meaning `they do not participate in the regular inheritance hierarchy`.
-
-## Static Protocols
