@@ -22,6 +22,19 @@ Functions that belong to a class require the first argument to be `self`, which 
 ...         print("Nice object func starting with self")
 ```
 
+## Polymorphism/overloaded Functions
+
+!!! info "functools.singledispatch"
+    Checkout functools.singledispatch section to see other use case. `functools.singledispatch is used for single-dispatch generic functions`.
+
+This decorator is used in Python for `function overloading`. `It allows you to define multiple methods with the same name but different signatures`, enabling more flexible use. When used in conjunction with type hints, it helps improve the clarity and maintainability of code.
+
+??? example
+
+    ``` py title="src/functions/overload.py"
+    --8<-- "src/functions/overload.py"
+    ```
+
 ## Return
 
 Functions in Python can indeed **return multiple values**. When a function is called, it can produce multiple results. This capability allows functions to provide comprehensive information or results that can be used further in the code.
