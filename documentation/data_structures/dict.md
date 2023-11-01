@@ -131,6 +131,33 @@ Dict acess with d[k] raises an error when k is not existing key. d.get(k, defaul
 
 ## Immutable Mappings
 
+## TypedDict
+
+A TypedDict is a `type hint that specifies a dictionary with a specific set of keys, each associated with a specific data type`. It is particularly useful when you want to define a dictionary with a known set of keys and their corresponding value types. This helps in providing type safety and clarity, especially when dealing with complex data structures.
+
+??? example
+
+    ``` py title="src/data_structures/typedict.py"
+    --8<-- "src/data_structures/typedict.py"
+    ```
+    ```bash title="output"
+    {'title': 'Programming Pearls', 'authors': 'Jon Bentley', 'isbn': '0201657880', 'pagecount': 256}
+    <class 'dict'>
+    ```
+
+At first glance, typing.TypedDict may appear to be a data class builder, like typing.NamedTuple. However, this syntactic similarity can be misleading. `TypedDict serves a very distinct purpose, it's not a class builder`. It is designed solely for the benefit of type checkers and does not have any effect during runtime.
+
+!!! info "two primary features"
+    1. `Class-like syntax for annotating a dictionary with type hints` for the value of each "field".
+    1. A constructor that informs the type checker to anticipate a dictionary with the specified keys and their associated values.
+
+During runtime, a `TypedDict constructor functions like a placebo: it has the same effect as calling the dict constructor with the same arguments`.
+
+!!! info "Creates a plain dict also means that:"
+    1. The "fields" in the pseudo-class definition `do not create instance attributes.`
+    1. You can’t write initializers with default values for the "fields".
+    1. `Method definitions are not allowed`.
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
