@@ -150,6 +150,14 @@ For a class to support positional pattern matching, you need to add a `__match_a
     Vector(x=2, y=11) is awesome
     ```
 
+## Operator Overloading
+
+Operator overloading enables `user-defined objects` to work with infix operators like `+` and `|`, or unary operators such as `-` and `~`. In Python, a thoughtful balance is maintained between flexibility, usability, and safety by introducing certain constraints on operator overloading:
+
+1. We cannot change the meaning of the operators for the `built-in types`.
+1. We `cannot create new operators`, only overload existing ones.
+1. A few operators can’t be overloaded: `is`, `and`, `or`, and `not`.
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
