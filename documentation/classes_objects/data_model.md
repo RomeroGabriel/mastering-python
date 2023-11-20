@@ -158,6 +158,37 @@ Operator overloading enables `user-defined objects` to work with infix operators
 1. We `cannot create new operators`, only overload existing ones.
 1. A few operators can’t be overloaded: `is`, `and`, `or`, and `not`.
 
+### Unary Operators (+, -, and ~)
+
+!!! info "`-`, implemented by `__neg__`"
+    Arithmetic unary negation. If `x` is -2 then `-x == 2`.
+
+!!! info "`+`, implemented by `__pos__`"
+    Arithmetic unary plus. Usually `x == +x`.
+
+!!! info "`~`, implemented by `__invert__`"
+    Bitwise not, or bitwise inverse of an integer, defined as `~x == -(x+1)`. If `x` is 2 then `~x == -3`.
+
+To implement unary operators (+, -, and ~) for your class, you need to `define the appropriate special method that takes only one argument: self`.
+
+!!! warning "Follow the General Rule for Operators"
+    `Always return a new object`. This means do not changes the receiver `self` and instead creating and returning a new instance of a suitable type.
+    For unary `-` and `+`, the result will likely be an `instance of the same class as self`. For unary `+`, if the receiver is `immutable`, you should return self; otherwise, return a copy of self.
+
+??? example
+
+    ``` py title="src/classes_objects/unary_operators.py"
+    --8<-- "src/classes_objects/unary_operators.py"
+    ```
+
+    ```bash title="output"
+    Initial Vector: Vector(x=2, y=1)
+    Plus Vector: Vector(x=3, y=2)
+    Negation Vector: Vector(x=-2, y=-1)
+    Bitwise not Vector: Vector(x=-3, y=-2)
+    FINAL Vector: Vector(x=2, y=1)
+    ```
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
