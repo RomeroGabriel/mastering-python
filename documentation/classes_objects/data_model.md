@@ -189,6 +189,25 @@ To implement unary operators (+, -, and ~) for your class, you need to `define t
     FINAL Vector: Vector(x=2, y=1)
     ```
 
+### Listing All Operators
+
+| Operator        | Forward        | Reverse        | In-place       | Description                              |
+| --------------- | -------------- | -------------- | -------------- | ---------------------------------------- |
+| +               | `__add__`      | `__radd__`     | `__iadd__`     | Addition or concatenation                |
+| -               | `__sub__`      | `__rsub__`     | `__isub__`     | Subtraction                              |
+| *               | `__mul__`      | `__rmul__`     | `__imul__`     | Multiplication or repetition            |
+| /               | `__truediv__`  | `__rtruediv__` | `__itruediv__` | True division                            |
+| //              | `__floordiv__` | `__rfloordiv__`| `__ifloordiv__`| Floor division                           |
+| %               | `__mod__`      | `__rmod__`     | `__imod__`     | Modulo                                   |
+| divmod()        | `__divmod__`   | `__rdivmod__`  | `__idivmod__`  | Returns tuple of floor division quotient and modulo |
+| **, pow()       | `__pow__`      | `__rpow__`     | `__ipow__`     | Exponentiation                           |
+| @               | `__matmul__`   | `__rmatmul__`  | `__imatmul__`  | Matrix multiplication                    |
+| &               | `__and__`      | `__rand__`     | `__iand__`     | Bitwise and                              |
+| \|              | `__or__`       | `__ror__`      | `__ior__`      | Bitwise or                               |
+| ^               | `__xor__`      | `__rxor__`     | `__ixor__`     | Bitwise xor                              |
+| <<              | `__lshift__`   | `__rlshift__`  | `__ilshift__`  | Bitwise shift left                       |
+| >>              | `__rshift__`   | `__rrshift__`  | `__irshift__`  | Bitwise shift right                      |
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
