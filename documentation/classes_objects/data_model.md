@@ -208,6 +208,17 @@ To implement unary operators (+, -, and ~) for your class, you need to `define t
 | <<              | `__lshift__`   | `__rlshift__`  | `__ilshift__`  | Bitwise shift left                       |
 | >>              | `__rshift__`   | `__rrshift__`  | `__irshift__`  | Bitwise shift right                      |
 
+### Listing All Rich Comparison Operators
+
+| Group    | Infix operator | Forward method call | Reverse method call | Fallback                      |
+|----------|----------------|----------------------|-----------------------|-------------------------------|
+| Equality | `a == b`         | `a.__eq__(b)`          | `b.__eq__(a)`           | Return id(a) == id(b)         |
+| Equality | `a != b`         | `a.__ne__(b)`          | `b.__ne__(a)`           | Return not (a == b)           |
+| Ordering | `a > b`          | `a.__gt__(b)`          | `b.__lt__(a)`           | Raise TypeError               |
+| Ordering | `a < b`          | `a.__lt__(b)`          | `b.__gt__(a)`           | Raise TypeError               |
+| Ordering | `a >= b`         | `a.__ge__(b)`          | `b.__le__(a)`           | Raise TypeError               |
+| Ordering | `a <= b`         | `a.__le__(b)`          | `b.__ge__(a)`           | Raise TypeError               |
+
 ## References
 
 - [Fluent Python, 2nd Edition](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/)
