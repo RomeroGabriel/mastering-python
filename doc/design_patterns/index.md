@@ -1,4 +1,4 @@
-# Design Patterns
+# Gang of Four - Design Patterns
 
 > Base information resource: [Refactoring Guru](https://refactoring.guru/design-patterns/catalog)
 

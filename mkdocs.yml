@@ -33,7 +33,9 @@ nav:
   - Closures and Decorators:
     - Closures: decorators_closures/closures.md
     - Decorators: decorators_closures/decorators.md
-  - Design Patterns: design_patterns/index.md
+  - Design Patterns: 
+    - Gang of Four - Design Patterns: design_patterns/index.md
+    - Iterators: design_patterns/iterators.md
   - Built-In Examples:
     - Functools Module: builtin_modules_examples/functools_module.md
     - Operator Module: builtin_modules_examples/operator_module.md
