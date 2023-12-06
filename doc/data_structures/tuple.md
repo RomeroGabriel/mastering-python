@@ -15,7 +15,7 @@ A set is a built-in data structure in Python and is classified as a type of [seq
 
 Basic concepts:
 
-1. [Object References](/documentation/basics/object_handling.md)
+1. [Object References](/doc/basics/object_handling.md)
 
 The concept of `immutability in tuples specifically pertains to the tuple's references`. It's crucial to note that while tuples themselves are immutable, this `immutability does not extend to the mutable objects they may reference`. Care should be taken when dealing with tuples containing mutable items to avoid potential sources of bugs.
 

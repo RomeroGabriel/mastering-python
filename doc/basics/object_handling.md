@@ -14,7 +14,7 @@ If a variable **changes the value of an object, all other variables assigned to 
 >>> print(a)
 ```
 
-![Object references. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/basics/objec_ref.png)
+![Object references. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/basics/objec_ref.png)
 
 ## Identity and Equality
 

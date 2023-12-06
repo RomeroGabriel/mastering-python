@@ -30,3 +30,26 @@ True
 >>> isinstance(goose_spam_can, abc.Iterable)
 True
 ```
+
+## Iterables vs Iterators
+
+!!! info "Iterable"
+    An iterable refers to `any object from which the iter built-in function can obtain an iterator`. `Objects that implement an __iter__ method returning an iterator are considered iterable`. Sequences, by definition, are always iterable. Objects implementing a `__getitem__` method that accepts 0-based indexes are also iterable.
+
+!!! warning "Relationship Between Iterables and Iterators"
+    `Python acquires iterators from iterables.`
+
+!!! info "Python’s standard interface for an iterator"
+    Two methods:
+    1. `__next__`: Returns the next item in the series, raising `StopIteration` if there are no more.
+    1. `__iter__`: Returns `self` and this `enables iterators to be used where an iterable is expected`, such as in a for loop.
+
+`The StopIteration exception indicates that the iterator is exhausted`. Internally, this exception is managed by the iter() built-in, which is integral to the logic of for loops and other iteration contexts like list comprehensions and iterable unpacking.
+
+This interface is formalized in the `collections.abc.Iterator` ABC (Abstract Base Class), which declares the abstract `__next__` method and subclasses Iterable—where the abstract `__iter__` method is declared.
+
+!!! example
+    ![The Iterable and Iterator ABCs. Methods in italic are abstract. from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/design_patterns/uml-iterator.png)
+    > The Iterable and Iterator ABCs. Methods in italic are abstract. from Fluent Python, 2nd Edition
+
+Due to the minimal methods required for an iterator (`__next__` and `__iter__`), `checking for remaining items involves calling next() and catching StopIteration`. Additionally, it is not possible to reset an iterator. `If you need to start over, you must call iter() on the iterable that created the iterator initially`. This minimal interface is sensible, `as not all iterators are resettable`. For instance, if an iterator is reading packets from the network, there's no way to rewind it.

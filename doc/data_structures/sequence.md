@@ -10,7 +10,7 @@ Container sequences, such as lists, tuples, and collections.deque, `can hold ite
 
 On the other hand, flat sequences, like str, bytes, and array.array, `hold items of one simple type and store the value of their contents in their own memory space`, not as separate Python objects. Refer to the image below for more details.
 
-![Container x Flat. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/data_structures/containerVSflat.png)
+![Container x Flat. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/data_structures/containerVSflat.png)
 > Container x Flat. Image from Fluent Python, 2nd Edition
 
 ### Mutable x Immutable
@@ -21,7 +21,7 @@ Immutable sequences include tuple, str, and bytes. Once created, these sequences
 
 `Mutable sequences inherit all methods from immutable sequences` and also implement several additional methods. Refer to the image below for more details.
 
-![Mutable Inherit. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/data_structures/mutable_inherit.png)
+![Mutable Inherit. Image from Fluent Python, 2nd Edition](https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/data_structures/mutable_inherit.png)
 > Mutable Inherit. Image from Fluent Python, 2nd Edition
 
 ## Unpacking
