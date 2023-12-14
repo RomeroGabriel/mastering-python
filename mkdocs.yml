@@ -39,6 +39,7 @@ nav:
   - Built-In Examples:
     - Functools Module: builtin_modules_examples/functools_module.md
     - Operator Module: builtin_modules_examples/operator_module.md
+    - Itertools Module: builtin_modules_examples/itertools.md
 
 theme:
   name: material
