@@ -102,3 +102,61 @@ Yields items from a slice of it, `similar to s[:stop] or s[start:stop:step] exce
     ```bash title="output"
     [6, 20, 12]
     ```
+
+## itertools.chain(it1, …, itN)
+
+Yields all items from it1, then from it2, etc., seamlessly.
+
+!!! example
+
+    ``` py title="src/builtint_modules/itertools/chain.py"
+    --8<-- "src/builtint_modules/itertools/chain.py"
+    ```
+
+    ```bash title="output"
+    ['d', 'f', 'k', 'l', 'n', 'p', 'a', 'e', 'i', 'o', 'u']
+    ```
+
+## itertools.chain.from_iterable(it)
+
+Yields all items from each iterable produced by `it`, one after the other, seamlessly. `it will be an iterable where the items are also iterables, for example, a list of tuples`.
+
+!!! example
+
+    ``` py title="src/builtint_modules/itertools/chain_from_iterable.py"
+    --8<-- "src/builtint_modules/itertools/chain_from_iterable.py"
+    ```
+
+    ```bash title="output"
+    [0, 'a', 1, 'e', 2, 'i', 3, 'o', 4, 'u']
+    ```
+
+## itertools.product(it1, …, itN, repeat=1)
+
+`Cartesian product`: yields N-tuples made by combining items from each input iterable, like nested for loops could produce. `repeat allows the input iterables to be consumed more than once`.
+
+!!! example
+
+    ``` py title="src/builtint_modules/itertools/product.py"
+    --8<-- "src/builtint_modules/itertools/product.py"
+    ```
+
+    ```bash title="output"
+    [('A', 0), ('A', 1), ('B', 0), ('B', 1), ('C', 0), ('C', 1)]
+    [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'B'), ('B', 'C'), ('C', 'A'), ('C', 'B'), ('C', 'C')]
+    ```
+
+## itertools.zip_longest(it1, …, itN, fillvalue=None)
+
+`Yields N-tuples built from items taken from the iterables in parallel`, stopping only when the last iterable is exhausted, `filling the blanks with the fillvalue`.
+
+!!! example
+
+    ``` py title="src/builtint_modules/itertools/zip_longest.py"
+    --8<-- "src/builtint_modules/itertools/zip_longest.py"
+    ```
+
+    ```bash title="output"
+    [('A', 0), ('B', 1), ('C', 2), (None, 3), (None, 4)]
+    [('A', 0), ('B', 1), ('C', 2), ('!!!', 3), ('!!!', 4)]
+    ```
