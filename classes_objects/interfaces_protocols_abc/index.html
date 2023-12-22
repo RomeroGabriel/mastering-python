@@ -12,7 +12,7 @@
         <link rel="prev" href="../data_model/">
       
       
-        <link rel="next" href="../../functions/basic/">
+        <link rel="next" href="../inheritance/">
       
       <link rel="icon" href="../../images/py.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -592,9 +596,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming-ducks" class="md-nav__link">
-    Programming Ducks
+  <a href="#programming-ducks-dynamic-protocols" class="md-nav__link">
+    Programming Ducks - Dynamic Protocols
   </a>
+  
+    <nav class="md-nav" aria-label="Programming Ducks - Dynamic Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monkey-patching-implementing-a-protocol-at-runtime" class="md-nav__link">
+    Monkey Patching: Implementing a Protocol at Runtime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -603,12 +620,53 @@
     Goose Typing
   </a>
   
+    <nav class="md-nav" aria-label="Goose Typing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subclassing-an-abc" class="md-nav__link">
+    Subclassing an ABC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abcs-in-the-standard-library" class="md-nav__link">
+    ABCs in the Standard Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-virtual-subclass-of-an-abc" class="md-nav__link">
+    A Virtual Subclass of an ABC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inheritance/" class="md-nav__link">
+        Inheritance
+      </a>
     </li>
   
 
@@ -914,10 +972,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -979,6 +1085,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1026,9 +1146,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#programming-ducks" class="md-nav__link">
-    Programming Ducks
+  <a href="#programming-ducks-dynamic-protocols" class="md-nav__link">
+    Programming Ducks - Dynamic Protocols
   </a>
+  
+    <nav class="md-nav" aria-label="Programming Ducks - Dynamic Protocols">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monkey-patching-implementing-a-protocol-at-runtime" class="md-nav__link">
+    Monkey Patching: Implementing a Protocol at Runtime
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1036,6 +1169,33 @@
   <a href="#goose-typing" class="md-nav__link">
     Goose Typing
   </a>
+  
+    <nav class="md-nav" aria-label="Goose Typing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subclassing-an-abc" class="md-nav__link">
+    Subclassing an ABC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abcs-in-the-standard-library" class="md-nav__link">
+    ABCs in the Standard Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-virtual-subclass-of-an-abc" class="md-nav__link">
+    A Virtual Subclass of an ABC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1075,12 +1235,92 @@
 <h2 id="the-typing-map">The Typing Map</h2>
 <p>The four typing approaches depicted in the image are complementary: they have different pros and cons. It doesn’t make sense to dismiss any of them. Each of these four approaches rely on interfaces to work, but static typing can be done—poorly—using only concrete types instead of interface abstractions like protocols and abstract base classes.</p>
 <div class="admonition quote">
-<p><img alt="Typing Map. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/classes_objects/typing_map.png" />
-<a href="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/classes_objects/typing_map.png">Typing Map. Image from Fluent Python, 2nd Edition</a></p>
+<p><img alt="Typing Map. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/classes_objects/typing_map.png" />
+<a href="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/classes_objects/typing_map.png">Typing Map. Image from Fluent Python, 2nd Edition</a></p>
 </div>
 <h2 id="duck-and-static-duck-typing">Duck and Static Duck Typing</h2>
-<h2 id="programming-ducks">Programming Ducks</h2>
+<p>In Python, the concept of a <code>protocol refers to an informal interface</code>. With the integration of <a href="https://peps.python.org/pep-0544/">PEP 544—Protocols: Structural subtyping (static duck typing)</a> in Python 3.8, the <code>term protocol has acquired an additional</code>, closely related yet distinct, meaning in the context of Python. <code>This PEP enables the creation of subclasses of typing.Protocol to define one or more methods that a class must implement or inherit to satisfy a static type checker</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Dynamic Protocol</p>
+<p><code>Refers to the implicit and convention-based protocols that have always existed in Python</code>. These protocols are <a href="https://docs.python.org/3/reference/datamodel.html">described in the documentation</a> and are integral to the Python language. They are fundamentally flexible, allowing objects to implement only a portion of the protocol while still retaining their utility.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Static Protocol</p>
+<p>Defined by <a href="https://peps.python.org/pep-0544/">PEP 544</a>, it represents a protocol that <code>requires an explicit definition, typically through a typing.Protocol subclass</code> since Python 3.8. <code>Objects implementing a static protocol must provide every method declared in the protocol class, even if not all methods are needed by the program</code>.</p>
+</div>
+<p><strong>Key Differences between Dynamic and Static Protocols</strong>:</p>
+<ol>
+<li>An object can <code>implement only a part of a dynamic protocol and still be functional</code>, whereas a <code>static protocol mandates the provision of every method declared in the protocol class</code>, irrespective of the program's requirements.</li>
+<li><code>Static protocols can be verified by static type checkers</code>, which is not possible for dynamic protocols.</li>
+</ol>
+<p>Python offers another explicit means of defining an interface in code: the <code>abstract base class (ABC)</code>.</p>
+<h2 id="programming-ducks-dynamic-protocols">Programming Ducks - Dynamic Protocols</h2>
+<h3 id="monkey-patching-implementing-a-protocol-at-runtime">Monkey Patching: Implementing a Protocol at Runtime</h3>
+<p>Monkey patching is dynamically <code>changing</code> a module, class, or function <code>at runtime</code>, to add features or fix bugs.  <code>It involves changing or adding attributes without altering its source code</code>.</p>
+<details class="warning">
+<summary>Warning</summary>
+<p>While it can be a powerful tool in certain situations, <code>it should be used with caution as it can make code more difficult to understand and maintain</code>. Therefore, it is generally advisable to use monkey patching judiciously and consider alternative approaches, such as subclassing or proper design patterns, when possible.</p>
+</details>
+<details class="example">
+<summary>Example</summary>
+<p><div class="language-py highlight"><span class="filename">src/classes_objects/monkey_patching.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">MyClass</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="nf">original_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the original method.&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">def</span> <span class="nf">new_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Patched behavior&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">obj</span><span class="o">.</span><span class="n">original_method</span><span class="p">()</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Monkey patching the &#39;original_method&#39; with &#39;new_method&#39;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">MyClass</span><span class="o">.</span><span class="n">original_method</span> <span class="o">=</span> <span class="n">new_method</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Calling the &#39;original_method&#39; after monkey patching</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">obj</span><span class="o">.</span><span class="n">original_method</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>original<span class="w"> </span>method.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Patched<span class="w"> </span>behavior
+</span></code></pre></div></p>
+</details>
 <h2 id="goose-typing">Goose Typing</h2>
+<p>In Python, the concept of <code>goose typing refers to a runtime type-checking approach that utilizes Abstract Base Classes (ABCs)</code>. Unlike languages with explicit interfaces, <code>Python relies on ABCs to define interfaces for the purpose of type checking</code>, both at runtime and with static type checkers.</p>
+<p><code>Abstract base classes enhance duck typing by introducing virtual subclasses, which are classes that do not directly inherit from a particular class but are still recognized by functions like isinstance() and issubclass()</code>. This runtime type checking approach is made possible by the usage of ABCs.</p>
+<p>In practice, <code>goose typing allows the use of isinstance(obj, cls) where cls is an abstract base class with a metaclass of abc.ABCMeta</code>. It is important to note that sometimes there is no need to register a class explicitly for it to be recognized as a subclass of an ABC.</p>
+<details class="example">
+<summary>subclass of an ABC without register</summary>
+<p><div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Struggle</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="mi">23</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">abc</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">Struggle</span><span class="p">(),</span> <span class="n">abc</span><span class="o">.</span><span class="n">Sized</span><span class="p">))</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">True</span>
+</span></code></pre></div><div class="markdown-exec"></div>
+</p>
+</details>
+<p>To summarize, goose typing involves:</p>
+<ol>
+<li><code>Creating subclasses from ABCs to explicitly indicate that you are implementing a previously defined interface</code>.</li>
+<li><code>Using ABCs for runtime type checking instead of concrete classes</code> as arguments for <code>isinstance</code> and <code>issubclass</code>.</li>
+</ol>
+<p>By employing ABCs for type checking, you can achieve more flexibility in your code. This approach allows for <code>greater polymorphism</code>, as components can <code>implement required methods without necessarily explicitly subclassing the ABC</code>. If needed, a component can always be registered later to pass explicit type checks.</p>
+<h3 id="subclassing-an-abc">Subclassing an ABC</h3>
+<p>When <code>subclassing</code> an Abstract Base Class (ABC), <code>the implementation of abstract methods is not checked during the import</code> of the module. Instead, it is c<code>hecked only at runtime when attempting to instantiate an object</code>. If <code>any of the abstract methods are not implemented</code>, a TypeError exception is raised with a message indicating that the abstract methods are missing, even if your class does not require these specific behaviors.</p>
+<p>Therefore, <code>it's crucial to ensure that all required abstract methods are implemented in your subclass to avoid runtime errors</code>. Even if certain functionalities are not needed for a particular subclass, their implementation is still mandatory to satisfy the requirements of the ABC and ensure proper instantiation and functionality during runtime.</p>
+<details class="example">
+<summary>Example</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">MyABC</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nd">@classmethod</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="k">def</span> <span class="nf">an_abstract_classmethod</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="k">pass</span>
+</span></code></pre></div>
+</details>
+<h3 id="abcs-in-the-standard-library">ABCs in the Standard Library</h3>
+<p>Abstract Base Classes (ABCs) are <code>primarily found in the collections.abc module</code>, although some others exist in modules like io and numbers. The <code>abc</code> module itself is also present, <code>containing the abc.ABC class</code>. While <code>every ABC depends on the abc module</code>, it is not necessary to import it explicitly unless you are creating a new ABC.</p>
+<p>The <code>collections.abc</code> module is extensively used, and its <a href="https://docs.python.org/3/library/collections.abc.html#collections-abstract-base-classes">documentation features a helpful table</a> that <code>summarizes the various ABCs, their relationships, as well as their abstract and concrete methods, often referred to as mixin methods</code>. This table provides a clear overview of the ABCs available in the standard library, allowing developers to understand their functionalities and relationships at a glance.</p>
+<h3 id="a-virtual-subclass-of-an-abc">A Virtual Subclass of an ABC</h3>
+<p>In goose typing, one of the notable features is the ability to <code>register a class as a virtual subclass of an Abstract Base Class (ABC), even if the class does not inherit from it</code>. By registering the class as a virtual subclass, you are essentially <code>asserting that the class faithfully implements the interface defined in the ABC, and Python will accept this assertion without performing a direct check</code>. However, if the class fails to implement the necessary methods as promised, Python will raise the usual runtime exceptions.</p>
+<p>This registration process involves <code>calling a class method</code>, often named <code>register</code>, on the <code>ABC</code>. <code>Once the class is registered, it becomes a virtual subclass of the ABC</code>, and Python recognizes it as such through functions like <code>issubclass</code>. It's important to note that the <code>registered class does not inherit any methods or attributes from the ABC</code>. The register method can be invoked as a standard function, or it can be used as a decorator to streamline the process.</p>
+<p>It's important to understand that <a href="../inheritance/#multiple-inheritance---execution-order-and-mro-attritube">inheritance is guided by a special class attribute named <strong>mro</strong></a>.  Notably, <code>ABCs are not included in the __mro__ attribute</code>, meaning <code>they do not participate in the regular inheritance hierarchy</code>.</p>
 
 
 

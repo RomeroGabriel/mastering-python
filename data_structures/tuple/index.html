@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -544,6 +548,20 @@
     <li class="md-nav__item">
       <a href="../../classes_objects/interfaces_protocols_abc/" class="md-nav__link">
         Interfaces, Protocols, and ABCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
       </a>
     </li>
   
@@ -948,10 +966,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1007,6 +1073,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1136,7 +1216,7 @@
 <h2 id="the-tuples-references-to-mutable-objects">The Tuples references to Mutable Objects</h2>
 <p>Basic concepts:</p>
 <ol>
-<li><a href="/documentation/basics/object_handling.md">Object References</a></li>
+<li><a href="/doc/basics/object_handling.md">Object References</a></li>
 </ol>
 <p>The concept of <code>immutability in tuples specifically pertains to the tuple's references</code>. It's crucial to note that while tuples themselves are immutable, this <code>immutability does not extend to the mutable objects they may reference</code>. Care should be taken when dealing with tuples containing mutable items to avoid potential sources of bugs.</p>
 <div class="language-pycon highlight"><span class="filename">tuple_refs.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>

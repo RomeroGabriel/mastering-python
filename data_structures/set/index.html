@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -544,6 +548,20 @@
     <li class="md-nav__item">
       <a href="../../classes_objects/interfaces_protocols_abc/" class="md-nav__link">
         Interfaces, Protocols, and ABCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
       </a>
     </li>
   
@@ -955,10 +973,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1014,6 +1080,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1176,7 +1256,7 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">setcomp</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">setcomp</span><span class="p">)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">&lt;class &#39;set&#39;&gt;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">{&#39;$&#39;, &#39;#&#39;, &#39;¬&#39;, &#39;°&#39;, &#39;©&#39;, &#39;&gt;&#39;, &#39;¢&#39;, &#39;±&#39;, &#39;¶&#39;, &#39;µ&#39;, &#39;¥&#39;, &#39;&lt;&#39;, &#39;%&#39;, &#39;£&#39;, &#39;®&#39;, &#39;÷&#39;, &#39;¤&#39;, &#39;§&#39;, &#39;×&#39;, &#39;=&#39;, &#39;+&#39;}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">{&#39;¢&#39;, &#39;¥&#39;, &#39;&lt;&#39;, &#39;&gt;&#39;, &#39;©&#39;, &#39;°&#39;, &#39;¬&#39;, &#39;§&#39;, &#39;$&#39;, &#39;¶&#39;, &#39;µ&#39;, &#39;®&#39;, &#39;%&#39;, &#39;+&#39;, &#39;=&#39;, &#39;¤&#39;, &#39;#&#39;, &#39;£&#39;, &#39;±&#39;, &#39;÷&#39;, &#39;×&#39;}</span>
 </span></code></pre></div>
 <h2 id="elements-must-be-hashable">Elements Must Be Hashable</h2>
 <p><code>Elements within a set must be hashable objects</code>, complete with appropriate implementations of <code>__hash__</code> and <code>__eq__</code> methods. It's important to note that the <code>set type itself isn't hashable</code>, preventing the construction of sets with nested set instances. However, <a href="#frozenset">FrozenSet</a> is hashable, allowing for the inclusion of frozenset elements within a set.</p>

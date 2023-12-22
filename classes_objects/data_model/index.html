@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -625,6 +629,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operator-overloading" class="md-nav__link">
+    Operator Overloading
+  </a>
+  
+    <nav class="md-nav" aria-label="Operator Overloading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unary-operators-and" class="md-nav__link">
+    Unary Operators (+, -, and ~)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-operators" class="md-nav__link">
+    Listing All Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-rich-comparison-operators" class="md-nav__link">
+    Listing All Rich Comparison Operators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -648,6 +686,20 @@
     <li class="md-nav__item">
       <a href="../interfaces_protocols_abc/" class="md-nav__link">
         Interfaces, Protocols, and ABCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inheritance/" class="md-nav__link">
+        Inheritance
       </a>
     </li>
   
@@ -954,10 +1006,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1013,6 +1113,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1109,6 +1223,40 @@
   <a href="#supporting-positional-pattern-matching" class="md-nav__link">
     Supporting Positional Pattern Matching
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator-overloading" class="md-nav__link">
+    Operator Overloading
+  </a>
+  
+    <nav class="md-nav" aria-label="Operator Overloading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unary-operators-and" class="md-nav__link">
+    Unary Operators (+, -, and ~)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-operators" class="md-nav__link">
+    Listing All Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-all-rich-comparison-operators" class="md-nav__link">
+    Listing All Rich Comparison Operators
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1353,6 +1501,239 @@
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="m">11</span><span class="o">)</span><span class="w"> </span>is<span class="w"> </span>awesome
 </span></code></pre></div>
 </details>
+<h2 id="operator-overloading">Operator Overloading</h2>
+<p>Operator overloading enables <code>user-defined objects</code> to work with infix operators like <code>+</code> and <code>|</code>, or unary operators such as <code>-</code> and <code>~</code>. In Python, a thoughtful balance is maintained between flexibility, usability, and safety by introducing certain constraints on operator overloading:</p>
+<ol>
+<li>We cannot change the meaning of the operators for the <code>built-in types</code>.</li>
+<li>We <code>cannot create new operators</code>, only overload existing ones.</li>
+<li>A few operators can’t be overloaded: <code>is</code>, <code>and</code>, <code>or</code>, and <code>not</code>.</li>
+</ol>
+<h3 id="unary-operators-and">Unary Operators (+, -, and ~)</h3>
+<div class="admonition info">
+<p class="admonition-title"><code>-</code>, implemented by <code>__neg__</code></p>
+<p>Arithmetic unary negation. If <code>x</code> is -2 then <code>-x == 2</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><code>+</code>, implemented by <code>__pos__</code></p>
+<p>Arithmetic unary plus. Usually <code>x == +x</code>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><code>~</code>, implemented by <code>__invert__</code></p>
+<p>Bitwise not, or bitwise inverse of an integer, defined as <code>~x == -(x+1)</code>. If <code>x</code> is 2 then <code>~x == -3</code>.</p>
+</div>
+<p>To implement unary operators (+, -, and ~) for your class, you need to <code>define the appropriate special method that takes only one argument: self</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Follow the General Rule for Operators</p>
+<p><code>Always return a new object</code>. This means do not changes the receiver <code>self</code> and instead creating and returning a new instance of a suitable type.
+For unary <code>-</code> and <code>+</code>, the result will likely be an <code>instance of the same class as self</code>. For unary <code>+</code>, if the receiver is <code>immutable</code>, you should return self; otherwise, return a copy of self.</p>
+</div>
+<details class="example">
+<summary>Example</summary>
+<div class="language-py highlight"><span class="filename">src/classes_objects/unary_operators.py</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">Vector</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">y</span><span class="p">:</span> <span class="nb">int</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Vector(x=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, y=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Vector(x=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, y=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)&quot;</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="k">def</span> <span class="fm">__neg__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>        <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">def</span> <span class="fm">__pos__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>        <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="k">def</span> <span class="fm">__invert__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>        <span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="n">vec</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initial Vector: </span><span class="si">{</span><span class="n">vec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Plus Vector: </span><span class="si">{</span><span class="o">+</span><span class="n">vec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Negation Vector: </span><span class="si">{</span><span class="o">-</span><span class="n">vec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-28"><a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Bitwise not Vector: </span><span class="si">{</span><span class="o">~</span><span class="n">vec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-29"><a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;FINAL Vector: </span><span class="si">{</span><span class="n">vec</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Initial<span class="w"> </span>Vector:<span class="w"> </span>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Plus<span class="w"> </span>Vector:<span class="w"> </span>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span><span class="m">3</span>,<span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="m">2</span><span class="o">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Negation<span class="w"> </span>Vector:<span class="w"> </span>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span>-2,<span class="w"> </span><span class="nv">y</span><span class="o">=</span>-1<span class="o">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Bitwise<span class="w"> </span>not<span class="w"> </span>Vector:<span class="w"> </span>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span>-3,<span class="w"> </span><span class="nv">y</span><span class="o">=</span>-2<span class="o">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>FINAL<span class="w"> </span>Vector:<span class="w"> </span>Vector<span class="o">(</span><span class="nv">x</span><span class="o">=</span><span class="m">2</span>,<span class="w"> </span><span class="nv">y</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+</span></code></pre></div>
+</details>
+<h3 id="listing-all-operators">Listing All Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Forward</th>
+<th>Reverse</th>
+<th>In-place</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td><code>__add__</code></td>
+<td><code>__radd__</code></td>
+<td><code>__iadd__</code></td>
+<td>Addition or concatenation</td>
+</tr>
+<tr>
+<td>-</td>
+<td><code>__sub__</code></td>
+<td><code>__rsub__</code></td>
+<td><code>__isub__</code></td>
+<td>Subtraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td><code>__mul__</code></td>
+<td><code>__rmul__</code></td>
+<td><code>__imul__</code></td>
+<td>Multiplication or repetition</td>
+</tr>
+<tr>
+<td>/</td>
+<td><code>__truediv__</code></td>
+<td><code>__rtruediv__</code></td>
+<td><code>__itruediv__</code></td>
+<td>True division</td>
+</tr>
+<tr>
+<td>//</td>
+<td><code>__floordiv__</code></td>
+<td><code>__rfloordiv__</code></td>
+<td><code>__ifloordiv__</code></td>
+<td>Floor division</td>
+</tr>
+<tr>
+<td>%</td>
+<td><code>__mod__</code></td>
+<td><code>__rmod__</code></td>
+<td><code>__imod__</code></td>
+<td>Modulo</td>
+</tr>
+<tr>
+<td>divmod()</td>
+<td><code>__divmod__</code></td>
+<td><code>__rdivmod__</code></td>
+<td><code>__idivmod__</code></td>
+<td>Returns tuple of floor division quotient and modulo</td>
+</tr>
+<tr>
+<td>**, pow()</td>
+<td><code>__pow__</code></td>
+<td><code>__rpow__</code></td>
+<td><code>__ipow__</code></td>
+<td>Exponentiation</td>
+</tr>
+<tr>
+<td>@</td>
+<td><code>__matmul__</code></td>
+<td><code>__rmatmul__</code></td>
+<td><code>__imatmul__</code></td>
+<td>Matrix multiplication</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td><code>__and__</code></td>
+<td><code>__rand__</code></td>
+<td><code>__iand__</code></td>
+<td>Bitwise and</td>
+</tr>
+<tr>
+<td>|</td>
+<td><code>__or__</code></td>
+<td><code>__ror__</code></td>
+<td><code>__ior__</code></td>
+<td>Bitwise or</td>
+</tr>
+<tr>
+<td>^</td>
+<td><code>__xor__</code></td>
+<td><code>__rxor__</code></td>
+<td><code>__ixor__</code></td>
+<td>Bitwise xor</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td><code>__lshift__</code></td>
+<td><code>__rlshift__</code></td>
+<td><code>__ilshift__</code></td>
+<td>Bitwise shift left</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td><code>__rshift__</code></td>
+<td><code>__rrshift__</code></td>
+<td><code>__irshift__</code></td>
+<td>Bitwise shift right</td>
+</tr>
+</tbody>
+</table>
+<h3 id="listing-all-rich-comparison-operators">Listing All Rich Comparison Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Infix operator</th>
+<th>Forward method call</th>
+<th>Reverse method call</th>
+<th>Fallback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equality</td>
+<td><code>a == b</code></td>
+<td><code>a.__eq__(b)</code></td>
+<td><code>b.__eq__(a)</code></td>
+<td>Return id(a) == id(b)</td>
+</tr>
+<tr>
+<td>Equality</td>
+<td><code>a != b</code></td>
+<td><code>a.__ne__(b)</code></td>
+<td><code>b.__ne__(a)</code></td>
+<td>Return not (a == b)</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td><code>a &gt; b</code></td>
+<td><code>a.__gt__(b)</code></td>
+<td><code>b.__lt__(a)</code></td>
+<td>Raise TypeError</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td><code>a &lt; b</code></td>
+<td><code>a.__lt__(b)</code></td>
+<td><code>b.__gt__(a)</code></td>
+<td>Raise TypeError</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td><code>a &gt;= b</code></td>
+<td><code>a.__ge__(b)</code></td>
+<td><code>b.__le__(a)</code></td>
+<td>Raise TypeError</td>
+</tr>
+<tr>
+<td>Ordering</td>
+<td><code>a &lt;= b</code></td>
+<td><code>a.__le__(b)</code></td>
+<td><code>b.__ge__(a)</code></td>
+<td>Raise TypeError</td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python, 2nd Edition</a></li>

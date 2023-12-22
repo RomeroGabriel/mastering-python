@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -544,6 +548,20 @@
     <li class="md-nav__item">
       <a href="../../classes_objects/interfaces_protocols_abc/" class="md-nav__link">
         Interfaces, Protocols, and ABCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
       </a>
     </li>
   
@@ -872,6 +890,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#typeddict" class="md-nav__link">
+    TypedDict
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -963,10 +988,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1022,6 +1095,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1126,6 +1213,13 @@
         <li class="md-nav__item">
   <a href="#immutable-mappings" class="md-nav__link">
     Immutable Mappings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typeddict" class="md-nav__link">
+    TypedDict
   </a>
   
 </li>
@@ -1286,6 +1380,46 @@ They most compact internal data structure for a container would be an array of p
 <h2 id="handling-missing-keys">Handling Missing Keys</h2>
 <h2 id="variations-of-dict">Variations of Dict</h2>
 <h2 id="immutable-mappings">Immutable Mappings</h2>
+<h2 id="typeddict">TypedDict</h2>
+<p>A TypedDict is a <code>type hint that specifies a dictionary with a specific set of keys, each associated with a specific data type</code>. It is particularly useful when you want to define a dictionary with a known set of keys and their corresponding value types. This helps in providing type safety and clarity, especially when dealing with complex data structures.</p>
+<details class="example">
+<summary>Example</summary>
+<p><div class="language-py highlight"><span class="filename">src/data_structures/typedict.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypedDict</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span> <span class="nc">BookDict</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">isbn</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">authors</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">pagecount</span><span class="p">:</span> <span class="nb">int</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">pp</span> <span class="o">=</span> <span class="n">BookDict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Programming Pearls&#39;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>              <span class="n">authors</span><span class="o">=</span><span class="s1">&#39;Jon Bentley&#39;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>              <span class="n">isbn</span><span class="o">=</span><span class="s1">&#39;0201657880&#39;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>              <span class="n">pagecount</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">pp</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">pp</span><span class="p">))</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">{</span><span class="s1">&#39;title&#39;</span>:<span class="w"> </span><span class="s1">&#39;Programming Pearls&#39;</span>,<span class="w"> </span><span class="s1">&#39;authors&#39;</span>:<span class="w"> </span><span class="s1">&#39;Jon Bentley&#39;</span>,<span class="w"> </span><span class="s1">&#39;isbn&#39;</span>:<span class="w"> </span><span class="s1">&#39;0201657880&#39;</span>,<span class="w"> </span><span class="s1">&#39;pagecount&#39;</span>:<span class="w"> </span><span class="m">256</span><span class="o">}</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&lt;class<span class="w"> </span><span class="s1">&#39;dict&#39;</span>&gt;
+</span></code></pre></div></p>
+</details>
+<p>At first glance, typing.TypedDict may appear to be a data class builder, like typing.NamedTuple. However, this syntactic similarity can be misleading. <code>TypedDict serves a very distinct purpose, it's not a class builder</code>. It is designed solely for the benefit of type checkers and does not have any effect during runtime.</p>
+<div class="admonition info">
+<p class="admonition-title">two primary features</p>
+<ol>
+<li><code>Class-like syntax for annotating a dictionary with type hints</code> for the value of each "field".</li>
+<li>A constructor that informs the type checker to anticipate a dictionary with the specified keys and their associated values.</li>
+</ol>
+</div>
+<p>During runtime, a <code>TypedDict constructor functions like a placebo: it has the same effect as calling the dict constructor with the same arguments</code>.</p>
+<div class="admonition info">
+<p class="admonition-title">Creates a plain dict also means that:</p>
+<ol>
+<li>The "fields" in the pseudo-class definition <code>do not create instance attributes.</code></li>
+<li>You can’t write initializers with default values for the "fields".</li>
+<li><code>Method definitions are not allowed</code>.</li>
+</ol>
+</div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/">Fluent Python, 2nd Edition</a></li>

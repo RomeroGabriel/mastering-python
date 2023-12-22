@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../classes_objects/interfaces_protocols_abc/">
+        <link rel="prev" href="../../classes_objects/inheritance/">
       
       
         <link rel="next" href="../parameters/">
@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -550,6 +554,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -629,6 +647,13 @@
         <li class="md-nav__item">
   <a href="#definitions-and-arguments" class="md-nav__link">
     Definitions and Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorphismoverloaded-functions" class="md-nav__link">
+    Polymorphism/overloaded Functions
   </a>
   
 </li>
@@ -983,10 +1008,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1048,6 +1121,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1083,6 +1170,13 @@
         <li class="md-nav__item">
   <a href="#definitions-and-arguments" class="md-nav__link">
     Definitions and Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorphismoverloaded-functions" class="md-nav__link">
+    Polymorphism/overloaded Functions
   </a>
   
 </li>
@@ -1195,31 +1289,88 @@
 <h1 id="basic-of-functions">Basic of Functions</h1>
 <h2 id="definitions-and-arguments">Definitions and Arguments</h2>
 <p>The <code>def</code> keyword introduces a function definition, followed by the function name and a list of formal parameters enclosed in parentheses. The function body starts on the next line and must be indented.</p>
-<p>When a function is called, the actual parameters (arguments) are introduced into the local symbol table of the called function. This is done using "<em>call by value</em>," where the <strong>value passed is always an object reference, not the value of the object itself</strong>. If a function calls another function or itself recursively, a new local symbol table is created for that call.</p>
-<div class="language-pycon highlight"><span class="filename">fun_definition.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_number</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<p>When a function is called, the actual parameters (arguments) are introduced into the local symbol table of the called function. This is done using <code>call by value</code>, where the <code>value passed is always an object reference, not the value of the object itself</code>. If a function calls another function or itself recursively, a new local symbol table is created for that call.</p>
+<details class="example">
+<summary>Function Definition</summary>
+<p><div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_number</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="c1"># typing arguments and return are optional</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">... </span>    <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
-</span></code></pre></div>
+</span></code></pre></div><div class="markdown-exec"></div>
+</p>
+</details>
 <p>Functions that belong to a class require the first argument to be <code>self</code>, which is used to pass the object reference to the function. This enables access to the class's attributes and methods within the function's body.</p>
-<div class="language-pycon highlight"><span class="filename">fun_class.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Nice</span><span class="p">:</span>
+<details class="example">
+<summary>Function in Classes</summary>
+<p><div class="language-pycon highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Nice</span><span class="p">:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="o">...</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span>    <span class="k">def</span> <span class="nf">nice_func</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nice object func starting with self&quot;</span><span class="p">)</span>
+</span></code></pre></div><div class="markdown-exec"></div>
+</p>
+</details>
+<h2 id="polymorphismoverloaded-functions">Polymorphism/overloaded Functions</h2>
+<div class="admonition info">
+<p class="admonition-title">functools.singledispatch</p>
+<p>Checkout functools.singledispatch section to see other use case. <code>functools.singledispatch is used for single-dispatch generic functions</code>.</p>
+</div>
+<p>This decorator is used in Python for <code>function overloading</code>. <code>It allows you to define multiple methods with the same name but different signatures</code>, enabling more flexible use. When used in conjunction with type hints, it helps improve the clarity and maintainability of code.</p>
+<details class="example">
+<summary>Example</summary>
+<div class="language-py highlight"><span class="filename">src/functions/overload.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">overload</span><span class="p">,</span> <span class="n">Union</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nd">@overload</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="o">...</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nd">@overload</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="o">...</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">return</span> <span class="n">data</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported data type&quot;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nd">@overload</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="o">...</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nd">@overload</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="o">...</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
 </span></code></pre></div>
+</details>
 <h2 id="return">Return</h2>
-<p>Functions in Python can indeed <strong>return multiple values</strong>. When a function is called, it can produce multiple results. This capability allows functions to provide comprehensive information or results that can be used further in the code.</p>
-<div class="language-pycon highlight"><span class="filename">mult_return.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_sub_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<p>Functions in Python can indeed <code>return multiple values</code>. When a function is called, it can produce multiple results. This capability allows functions to provide comprehensive information or results that can be used further in the code.</p>
+<details class="example">
+<summary>Multiple retun values</summary>
+<p><div class="language-pycon highlight"><span class="filename">mult_return.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_sub_numbers</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">,</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">add_sub_numbers</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">(4, 0)</span>
-</span></code></pre></div>
-<p>Moreover, <em>even functions that do not explicitly contain a return statement still return a value</em>, albeit a default and unexciting one called <code>None</code>. When the return statement is missing, the interpreter automatically returns <code>None</code> as the function's output.</p>
-<div class="language-pycon highlight"><span class="filename">fun_none.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_number_print</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+</span></code></pre></div><div class="markdown-exec"></div>
+</p>
+</details>
+<p>Moreover, <code>even functions that do not explicitly contain a return statement still return a value</code>, albeit a default and unexciting one called <code>None</code>. When the return statement is missing, the interpreter automatically returns <code>None</code> as the function's output.</p>
+<details class="example">
+<summary>None return</summary>
+<p><div class="language-pycon highlight"><span class="filename">fun_none.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add_number_print</span><span class="p">(</span><span class="n">num1</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">num2</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">add_number_print</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="go">4</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="go">None</span>
-</span></code></pre></div>
+</span></code></pre></div><div class="markdown-exec"></div>
+</p>
+</details>
 <h2 id="the-nine-types-of-callable-objects">The Nine Types of Callable Objects</h2>
 <p>To determine whether an object is callable, use the <code>callable()</code> built-in function.</p>
 <h3 id="user-defined-functions">User-Defined Functions</h3>

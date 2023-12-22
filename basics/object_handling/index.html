@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -628,6 +632,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -928,10 +946,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -987,6 +1053,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1094,7 +1174,7 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="go">[1, 2, 3, 4]</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="go">[1, 2, 3, 4]</span>
 </span></code></pre></div>
-<p><img alt="Object references. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/basics/objec_ref.png" /></p>
+<p><img alt="Object references. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/basics/objec_ref.png" /></p>
 <h2 id="identity-and-equality">Identity and Equality</h2>
 <p>In Python, variables that refer to the <strong>same object have the same identity and values</strong>. Any changes made to the object through one variable will be reflected when accessing it through the other variable.</p>
 <p>On the other hand, if <strong>two different objects are created with the same values</strong>, they will have <strong>different identities</strong>. This is because <strong>each object occupies a distinct location in memory</strong>, even though their values may be the same. It's important to note that <strong>equality of values does not imply identity</strong>. Each object has its own unique identity, regardless of the similarity of their values.</p>
@@ -1108,7 +1188,7 @@
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Alex == Charles? </span><span class="si">{</span><span class="n">alex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">charles</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Alex is Charles? </span><span class="si">{</span><span class="n">alex</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="n">charles</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">Lewis is charles? True</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">Charles id: 140518941921024, Lewis id: 140518941921024</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">Charles id: 140149770070272, Lewis id: 140149770070272</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">Charles with balance property also {&#39;name&#39;: &#39;Charles L. Dodgson&#39;, &#39;born&#39;: 1832, &#39;balance&#39;: 950}</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">Alex == Charles? True</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="go">Alex is Charles? False</span>
@@ -1138,7 +1218,7 @@
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="go">l1 == l2? True</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="go">l1 is l2? False</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="go">l1 id: 140518940932096, l2 id: 140518940728896</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="go">l1 id: 140149756098048, l2 id: 140149756027392</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="go">You can change l1 just fine, without changing l2: </span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="go">[3, [66, 55, 44], (7, 8, 9), 100]</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="go">[3, [66, 55, 44], (7, 8, 9)]</span>
@@ -1163,10 +1243,10 @@ may be garbage-collected.</p>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Now the garbage collector can discard that object.&quot;</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">140518940445888 140518940445888</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">140149770707712 140149770707712</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">[1, 2]</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">Rebinding b to a different object, removing the last remaining reference to [1, 2]</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">140518940447296</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">140149767681024</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="go">Now the garbage collector can discard that object.</span>
 </span></code></pre></div>
 <h2 id="references">References</h2>

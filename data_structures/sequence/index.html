@@ -257,11 +257,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../design_patterns/" class="md-tabs__link">
-      Design Patterns
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../design_patterns/" class="md-tabs__link">
+        Design Patterns
+      </a>
+    </li>
+  
 
       
         
@@ -544,6 +548,20 @@
     <li class="md-nav__item">
       <a href="../../classes_objects/interfaces_protocols_abc/" class="md-nav__link">
         Interfaces, Protocols, and ABCs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../classes_objects/inheritance/" class="md-nav__link">
+        Inheritance
       </a>
     </li>
   
@@ -995,10 +1013,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../design_patterns/" class="md-nav__link">
-        Design Patterns
+        Gang of Four - Design Patterns
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_patterns/iterators/" class="md-nav__link">
+        Iterators
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1054,6 +1120,20 @@
     <li class="md-nav__item">
       <a href="../../builtin_modules_examples/operator_module/" class="md-nav__link">
         Operator Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../builtin_modules_examples/itertools/" class="md-nav__link">
+        Itertools Module
       </a>
     </li>
   
@@ -1222,7 +1302,7 @@
 <h3 id="container-x-flat">Container x Flat</h3>
 <p>Container sequences, such as lists, tuples, and collections.deque, <code>can hold items of different types</code>, including other nested containers. They <code>hold references to the objects they contain</code>, which may be of any type.</p>
 <p>On the other hand, flat sequences, like str, bytes, and array.array, <code>hold items of one simple type and store the value of their contents in their own memory space</code>, not as separate Python objects. Refer to the image below for more details.</p>
-<p><img alt="Container x Flat. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/data_structures/containerVSflat.png" /></p>
+<p><img alt="Container x Flat. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/data_structures/containerVSflat.png" /></p>
 <blockquote>
 <p>Container x Flat. Image from Fluent Python, 2nd Edition</p>
 </blockquote>
@@ -1230,7 +1310,7 @@
 <p>Mutable sequences include list, bytearray, array.array, and collections.deque. These sequences <code>can be modified after creation</code>, allowing you to add, remove, or modify elements.</p>
 <p>Immutable sequences include tuple, str, and bytes. Once created, these sequences <code>cannot be changed</code>, meaning their elements cannot be modified or added.</p>
 <p><code>Mutable sequences inherit all methods from immutable sequences</code> and also implement several additional methods. Refer to the image below for more details.</p>
-<p><img alt="Mutable Inherit. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/documentation/images/data_structures/mutable_inherit.png" /></p>
+<p><img alt="Mutable Inherit. Image from Fluent Python, 2nd Edition" src="https://raw.githubusercontent.com/RomeroGabriel/mastering-python/main/doc/images/data_structures/mutable_inherit.png" /></p>
 <blockquote>
 <p>Mutable Inherit. Image from Fluent Python, 2nd Edition</p>
 </blockquote>
@@ -1433,7 +1513,7 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">last</span><span class="p">)</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">(36, 162, 163, 165, 8364, 164)</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">&lt;class &#39;generator&#39;&gt;</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">{&#39;5&#39;, &#39;2&#39;, &#39;4&#39;, &#39;1&#39;, &#39;3&#39;}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">{&#39;4&#39;, &#39;5&#39;, &#39;3&#39;, &#39;1&#39;, &#39;2&#39;}</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="go">53</span>
 </span></code></pre></div>
 <h2 id="references">References</h2>
