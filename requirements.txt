@@ -6,7 +6,7 @@ distlib==0.3.6
 filelock==3.20.3
 ghp-import==2.1.0
 griffe==0.29.1
-idna==3.7
+idna==3.15
 Jinja2==3.1.6
 Markdown==3.8.1
 markdown-callouts==0.3.0
